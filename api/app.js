@@ -4,8 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//Registar a rota:
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var clubsRouter = require('./routes/clubs');
 
 var app = express();
 
@@ -19,8 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Quando alguém aceder ao /clubs, usa o clubsRouter
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/clubs', clubsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
