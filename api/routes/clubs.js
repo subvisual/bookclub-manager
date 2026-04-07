@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 const fs = require('fs');
 
-const data = fs.readFileSync('../clubs.json', 'utf8');
+const data = fs.readFileSync('./clubs.json', 'utf8');
 const clubs = JSON.parse(data);
 
 
