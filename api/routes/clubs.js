@@ -16,6 +16,7 @@ res.json(clubs);
 router.post('/', function (req, res){
     const newBookClub = req.body;
     clubs.clubs.push(newBookClub);
+    // Guarda o array
     fs.writeFileSync('./clubs.json', JSON.stringify(clubs));
     res.json(newBookClub);
     
@@ -31,6 +32,20 @@ router.delete('/:id', function(req, res){
     fs.writeFileSync('./clubs.json', JSON.stringify(clubs));
    
     res.json(update);
+})
+
+router.put('/:id', function (req, res) {
+    
+    const id = Number(req.params.id);
+    // Para buscar os novos dados do clube 
+    const updatedClub = req.body;
+    // Localizo o clube pelo id
+    const clubId = clubs.clubs.find (club => club.id == id);
+   // Modifica o clube encontrado, copia os dados do updatedClub para clubId
+    Object.assign(clubId, updatedClub);
+   
+    fs.writeFileSync('./clubs.json', JSON.stringify(clubs));
+    res.json(clubId);
 })
 
 module.exports = router;
