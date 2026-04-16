@@ -14,17 +14,22 @@ title: string;
 author: string;
 }
 
-const url = 'http://localhost:3000/clubs';
 
 
+
+export const url = 'http://localhost:3000/clubs';
+
+// : Tipar a função. Esta devolve uma promise que por sua vez devolve o [] de clubs. 
+// É chamada no react
+export function getBookClubs(): Promise<BookClub[]> {
 
 // GET por defeito
-fetch(url)
+return fetch(url)
 .then((response) => {
     if (response.status == 200) {
        
 return response.json()
-
-    }
 }
-)
+    }
+    )
+}
