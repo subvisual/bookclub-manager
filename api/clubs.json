@@ -1,1 +1,20 @@
-{"clubs":[{"id":1,"name":"First Club","description":"First Club is...","currentBook":{"title":"First Book","author":"Author 1"},"upcomingBooks":[],"pastBooks":[]},{"id":2,"name":"Second Club","description":"Second Club is...","currentBook":{"title":"Second Book","author":"Auhtor 2"},"upcomingBooks":[],"pastBooks":[]}]}
+{
+	"clubs": [
+		{
+			"id": 1,
+			"name": "First Club",
+			"description": "First Club is...",
+			"currentBook": { "title": "First Book", "author": "Author 1" },
+			"upcomingBooks": [],
+			"pastBooks": []
+		},
+		{
+			"id": 2,
+			"name": "Second Club",
+			"description": "Second Club is...",
+			"currentBook": { "title": "Second Book", "author": "Auhtor 2" },
+			"upcomingBooks": [],
+			"pastBooks": []
+		}
+	]
+}
