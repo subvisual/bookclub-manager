@@ -22,7 +22,7 @@ export function getBookClubs(): Promise<BookClub[]> {
 	// GET por defeito
 	return fetch(url).then((response) => {
 		if (response.status == 200) {
-			return response.json();
+			return response.json().then((data) => data.clubs);
 		}
 	});
 }
