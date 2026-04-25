@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { BookClub } from "./callApi";
-import { getBookClubs } from "./callApi";
+import { getBookClubs, deleteBookClub } from "./callApi";
+
 
 export function useClubs() {
 	// Guardo os clubs no estado
@@ -8,7 +9,7 @@ export function useClubs() {
 
 	useEffect(
 		() => {
-			// A função do call api, vai buscar os clubs
+			// A função do callApi, vai buscar os clubs
 			getBookClubs()
 				// passa os clubs para setClubs
 				.then(setClubs);
@@ -17,4 +18,8 @@ export function useClubs() {
 		[],
 	);
 	return clubs;
+
+	function delClub (id:number){
+		deleteBookClub(id).then()
+			}
 }
