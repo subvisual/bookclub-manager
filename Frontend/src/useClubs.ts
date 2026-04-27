@@ -4,8 +4,8 @@ import { getBookClubs, deleteBookClub } from "./callApi";
 
 
 export function useClubs() {
-	// Guardo os clubs no estado
-	const [clubs, setClubs] = useState<BookClub[]>([]);
+	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado. 
+		const [clubs, setClubs] = useState<BookClub[]>([]);
 
 	useEffect(
 		() => {
@@ -17,9 +17,15 @@ export function useClubs() {
 		// Para só executar uma vez
 		[],
 	);
-	return clubs;
 
 	function delClub (id:number){
-		deleteBookClub(id).then()
+		//Função do CallApi que já faz o pedido delete com id
+		deleteBookClub(id).then(() => {
+			//Setclubs atualiza clubs, filtro o estado atual recebido. Mantém os clubs com id diferente
+			setClubs((clubs) => clubs.filter((club) => club.id !== id ))
+		});
 			}
+			return {clubs, delClub};
 }
+
+
