@@ -31,8 +31,8 @@ export function getBookClubs(): Promise<BookClub[]> {
 export function deleteBookClub(id: number): Promise<void> {
 	// Concatenei à const url
 	return fetch(`${url}/${id}`).then((response) => {
-		if(response.status == 200) {
-			return 
+		if (response.status == 200) {
+			return;
 		}
-	})
+	});
 }

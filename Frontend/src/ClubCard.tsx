@@ -3,12 +3,17 @@ import type { BookClub } from "./callApi";
 
 //Para receber a function delClub. Extende BookClub
 type ClubCardProps = BookClub & {
-	delClub: (id:number) => void;
-}
+	delClub: (id: number) => void;
+};
 
 // Component para mostrar Club - {props} do BookClub
 // Props delClub adicionada
-export function ClubCard({ name, description, currentBook, delClub }: ClubCardProps) {
+export function ClubCard({
+	name,
+	description,
+	currentBook,
+	delClub,
+}: ClubCardProps) {
 	return (
 		<div>
 			<h1>{name}</h1>
