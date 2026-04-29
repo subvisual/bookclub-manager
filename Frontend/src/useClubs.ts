@@ -17,12 +17,12 @@ export function useClubs() {
 		[],
 	);
 
-	function delClub(id: number) {
+	function deleteClub(id: number) {
 		//Função do CallApi que já faz o pedido delete com id
 		deleteBookClub(id).then(() => {
 			//Setclubs atualiza clubs, filtro o estado atual recebido. Mantém os clubs com id diferente
 			setClubs((clubs) => clubs.filter((club) => club.id !== id));
 		});
 	}
-	return { clubs, delClub };
+	return { clubs, deleteClub };
 }
