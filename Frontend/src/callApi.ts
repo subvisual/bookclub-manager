@@ -36,3 +36,19 @@ export function deleteBookClub(id: number): Promise<void> {
 		}
 	});
 }
+// UpdatedClub recebe apenas os dados atualizados -- Partial.
+export function updateBookClub(
+	id: number,
+	updatedClub: Partial<BookClub>,
+): Promise<BookClub> {
+	// updatedCLub é convertido para JSON -- stringify -- no body e o headers indica que está a enviar json
+	return fetch(`${url}/${id}`, {
+		method: "PUT",
+		body: JSON.stringify(updatedClub),
+		headers: { "Content-Type": "application/json" },
+	}).then((response) => {
+		if (response.status == 200) {
+			return response.json().then((data) => data);
+		}
+	});
+}
