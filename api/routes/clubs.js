@@ -12,8 +12,9 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
 	const newBookClub = req.body;
+	//Adiciono ao array
 	clubs.clubs.push(newBookClub);
-	// Guarda o array
+	// Guarda em json
 	fs.writeFileSync("./clubs.json", JSON.stringify(clubs));
 	res.json(newBookClub);
 });
