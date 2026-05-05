@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import type { BookClub } from "./callApi";
-import { deleteBookClub, getBookClubs } from "./callApi";
+import { deleteBookClub, getBookClubs, updateBookClub } from "./callApi";
 
 export function useClubs() {
 	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado.
@@ -24,5 +24,17 @@ export function useClubs() {
 			setClubs((clubs) => clubs.filter((club) => club.id !== id));
 		});
 	}
-	return { clubs, deleteClub };
+
+	function updateClub(id: number, updatedClub: Partial<BookClub>) {
+		// Do callApi.ts
+		updateBookClub(id, updatedClub).then(() => {
+			// Atualizo clubs, percorro o array com map, se o id é igual, substitui com dados atualizados, se não mantém os dados.
+			setClubs((clubs) =>
+				clubs.map((club) =>
+					club.id == id ? { ...club, ...updatedClub } : club,
+				),
+			);
+		});
+	}
+	return { clubs, deleteClub, updateClub };
 }
