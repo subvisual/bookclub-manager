@@ -36,15 +36,29 @@ export function deleteBookClub(id: number): Promise<void> {
 		}
 	});
 }
-// UpdatedClub recebe apenas os dados atualizados -- Partial.
+
 export function updateBookClub(
 	id: number,
+	// UpdatedClub recebe apenas os dados atualizados -- Partial.
 	updatedClub: Partial<BookClub>,
 ): Promise<BookClub> {
-	// updatedCLub é convertido para JSON -- stringify -- no body e o headers indica que está a enviar json
 	return fetch(`${url}/${id}`, {
 		method: "PUT",
+		// updatedCLub é convertido para JSON -- stringify -- no body
 		body: JSON.stringify(updatedClub),
+		// headers indica que está a enviar json
+		headers: { "Content-Type": "application/json" },
+	}).then((response) => {
+		if (response.status == 200) {
+			return response.json().then((data) => data);
+		}
+	});
+}
+
+export function createBookClub(newClub: BookClub): Promise<BookClub> {
+	return fetch(url, {
+		method: "POST",
+		body: JSON.stringify(newClub),
 		headers: { "Content-Type": "application/json" },
 	}).then((response) => {
 		if (response.status == 200) {
