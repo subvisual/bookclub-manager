@@ -1,0 +1,6 @@
+.club-card{
+    border: 1px solid #A47251;
+    border-radius: 5px;
+    display: column;
+    justify-content: center;
+}

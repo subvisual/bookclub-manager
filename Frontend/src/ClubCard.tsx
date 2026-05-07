@@ -1,5 +1,6 @@
 //Importo a interface
 import type { BookClub } from "./callApi";
+import "./clubCard.css"
 
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
@@ -15,8 +16,8 @@ export function ClubCard({
 	deleteClub,
 }: ClubCardProps) {
 	return (
-		<div>
-			<h1>{name}</h1>
+		<div className="club-card">
+			<h2>{name}</h2>
 			<p>{description}</p>
 			<p>{currentBook.title}</p>
 			<p>{currentBook.author}</p>
