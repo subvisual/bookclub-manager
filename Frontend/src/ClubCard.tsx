@@ -4,6 +4,7 @@ import type { BookClub } from "./callApi";
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
+	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub
@@ -13,6 +14,7 @@ export function ClubCard({
 	description,
 	currentBook,
 	deleteClub,
+	updateClub,
 }: ClubCardProps) {
 	return (
 		<div>
