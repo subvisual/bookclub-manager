@@ -4,7 +4,7 @@ import { useClubs } from "./useClubs";
 export function ClubList() {
 	// uso o hook criado em useClubs
 	// Atualizei o ClubList com o delete
-	const { clubs, deleteClub } = useClubs();
+	const { clubs, deleteClub, updateClub } = useClubs();
 	// percorro o array através de map
 	return (
 	<>
@@ -12,10 +12,6 @@ export function ClubList() {
 	{clubs.map((club) => {
 		// Passo para o card (key por causa do react)
 		//Atualizei o card com
-<<<<<<< Updated upstream
-		return <ClubCard key={club.id} {...club} deleteClub={deleteClub} />;
-	});
-=======
 		return (
 			<ClubCard
 				key={club.id}
@@ -26,5 +22,4 @@ export function ClubList() {
 		);
 	})}
 	</>);
->>>>>>> Stashed changes
 }

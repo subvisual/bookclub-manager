@@ -5,6 +5,7 @@ import "./clubCard.css"
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
+	updateClub: (id:number, updatedClub: Partial<BookClub>) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub
@@ -14,6 +15,7 @@ export function ClubCard({
 	description,
 	currentBook,
 	deleteClub,
+	updateClub,
 }: ClubCardProps) {
 	return (
 		<div className="club-card">
