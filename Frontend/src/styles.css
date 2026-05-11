@@ -1,0 +1,28 @@
+body{
+    background-color: #FEFCF7;
+}
+
+h1 {
+    color: #B47A65;
+}
+
+h2 {
+    color: #2C3E50;
+}
+
+p {
+    color: #3D5066;
+}
+
+
+.club-card{
+    border: 1px solid #B47A65;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.club-list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}

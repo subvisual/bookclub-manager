@@ -1,5 +1,6 @@
 import { ClubCard } from "./ClubCard";
 import { useClubs } from "./useClubs";
+import "./styles.css"
 
 export function ClubList() {
 	// uso o hook criado em useClubs
@@ -9,6 +10,7 @@ export function ClubList() {
 	return (
 	<>
 	<h1>Book Clubs</h1>
+	<div className="club-list">
 	{clubs.map((club) => {
 		// Passo para o card (key por causa do react)
 		//Atualizei o card com
@@ -21,5 +23,8 @@ export function ClubList() {
 			/>
 		);
 	})}
-	</>);
+	</div>
+	</>
+	);
+	
 }
