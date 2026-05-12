@@ -1,11 +1,11 @@
 //Importo a interface
 import type { BookClub } from "./callApi";
-import "./styles.css"
+import "./styles.css";
 
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
-	updateClub: (id:number, updatedClub: Partial<BookClub>) => void;
+	updateClub: (id: number, updatedClub: Partial<BookClub>) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub

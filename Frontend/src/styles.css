@@ -1,29 +1,28 @@
-body{
-    background-color: #FEFCF7;
+body {
+	background-color: #fefcf7;
 }
 
 h1 {
-    color: #B47A65;
+	color: #b47a65;
 }
 
 h2 {
-    color: #2C3E50;
+	color: #2c3e50;
 }
 
 p {
-    color: #3D5066;
+	color: #3d5066;
 }
 
-
-.club-card{
-    border: 1px solid #B47A65;
-    border-radius: 5px;
-    justify-content: center;
-    padding: 20px;
+.club-card {
+	border: 1px solid #b47a65;
+	border-radius: 5px;
+	justify-content: center;
+	padding: 20px;
 }
 
-.club-list{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+.club-list {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
 }

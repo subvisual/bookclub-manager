@@ -1,6 +1,6 @@
 import { ClubCard } from "./ClubCard";
 import { useClubs } from "./useClubs";
-import "./styles.css"
+import "./styles.css";
 
 export function ClubList() {
 	// uso o hook criado em useClubs
@@ -8,23 +8,22 @@ export function ClubList() {
 	const { clubs, deleteClub, updateClub } = useClubs();
 	// percorro o array através de map
 	return (
-	<>
-	<h1>Book Clubs</h1>
-	<div className="club-list">
-	{clubs.map((club) => {
-		// Passo para o card (key por causa do react)
-		//Atualizei o card com
-		return (
-			<ClubCard
-				key={club.id}
-				{...club}
-				deleteClub={deleteClub}
-				updateClub={updateClub} /*createClub={createClub}*/
-			/>
-		);
-	})}
-	</div>
-	</>
+		<>
+			<h1>Book Clubs</h1>
+			<div className="club-list">
+				{clubs.map((club) => {
+					// Passo para o card (key por causa do react)
+					//Atualizei o card com
+					return (
+						<ClubCard
+							key={club.id}
+							{...club}
+							deleteClub={deleteClub}
+							updateClub={updateClub} /*createClub={createClub}*/
+						/>
+					);
+				})}
+			</div>
+		</>
 	);
-	
 }
