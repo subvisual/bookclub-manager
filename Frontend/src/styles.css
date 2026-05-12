@@ -19,6 +19,7 @@ p {
     border: 1px solid #B47A65;
     border-radius: 5px;
     justify-content: center;
+    padding: 20px;
 }
 
 .club-list{
