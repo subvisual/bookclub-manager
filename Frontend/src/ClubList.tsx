@@ -1,6 +1,5 @@
 import { ClubCard } from "./ClubCard";
 import { useClubs } from "./useClubs";
-import "./styles.css";
 
 export function ClubList() {
 	// uso o hook criado em useClubs

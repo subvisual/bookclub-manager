@@ -1,6 +1,5 @@
 //Importo a interface
 import type { BookClub } from "./callApi";
-import "./styles.css";
 
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
