@@ -6,5 +6,9 @@ type ButtonProps = {
 };
 
 export function DeleteButton({ id, deleteClub }: ButtonProps) {
-	return <button type="button" onClick={() => deleteClub(id)}>DELETE</button>;
+	return (
+		<button type="button" onClick={() => deleteClub(id)}>
+			DELETE
+		</button>
+	);
 }
