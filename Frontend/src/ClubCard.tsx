@@ -5,7 +5,7 @@ import { DeleteButton } from "./DeleteButton";
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
-	updateClub: (id: number, updatedClub: Partial<BookClub>) => void;
+	updateClub: (ioutd: number, updatedClub: Partial<BookClub>) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub
