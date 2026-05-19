@@ -60,5 +60,12 @@ export function useClubs() {
 		setSelectedClub(id);
 	
 	}
-	return { clubs,  deleteClub, updateClub, createClub, selectedClub, showClub };
+
+	// Novo estado. Vai receber number(id) ou null. Inicio em null, mostrando a lista de clubs
+	const [selectedClub, setSelectedClub] = useState<number | null>(null);
+	// Mostro o club quando selecionado o id
+	function showClub(id: number) {
+		setSelectedClub(id);
+	}
+	return { clubs, deleteClub, updateClub, createClub, selectedClub, showClub };
 }
