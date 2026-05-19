@@ -11,9 +11,6 @@ export function useClubs() {
 	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado.
 	const [clubs, setClubs] = useState<BookClub[]>([]);
 
-	
-
-
 	useEffect(
 		() => {
 			// A função do callApi, vai buscar os clubs
@@ -50,15 +47,7 @@ export function useClubs() {
 		createBookClub(newClub).then((createdClub) => {
 			//Atualizo clubs, cria novo array com clubs + novo club
 			setClubs((clubs) => [...clubs, createdClub]);
-		});	
-	}
-
-	// Novo estado. Vai receber number(id) ou null. Inicio em null, mostrando a lista de clubs
-	const [selectedClub, setSelectedClub] = useState<number | null>(null);
-	// Mostro o club quando selecionado o id 
-	function showClub(id:number) {
-		setSelectedClub(id);
-	
+		});
 	}
 
 	// Novo estado. Vai receber number(id) ou null. Inicio em null, mostrando a lista de clubs
@@ -67,5 +56,6 @@ export function useClubs() {
 	function showClub(id: number) {
 		setSelectedClub(id);
 	}
+
 	return { clubs, deleteClub, updateClub, createClub, selectedClub, showClub };
 }
