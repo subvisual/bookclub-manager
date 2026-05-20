@@ -7,7 +7,7 @@ import { DetailsButton } from "./DetailsButton";
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
 	updateClub: (id: number, updatedClub: Partial<BookClub>) => void;
-	showClub: (id:number) => void;
+	showClub: (id: number) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub
