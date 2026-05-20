@@ -1,11 +1,13 @@
 //Importo a interface
 import type { BookClub } from "./callApi";
 import { DeleteButton } from "./DeleteButton";
+import { DetailsButton } from "./DetailsButton";
 
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
-	updateClub: (ioutd: number, updatedClub: Partial<BookClub>) => void;
+	updateClub: (id: number, updatedClub: Partial<BookClub>) => void;
+	showClub: (id:number) => void;
 };
 
 // Component para mostrar Club - {props} do BookClub
@@ -17,6 +19,7 @@ export function ClubCard({
 	description,
 	currentBook,
 	deleteClub,
+	showClub,
 	updateClub,
 }: ClubCardProps) {
 	return (
@@ -27,6 +30,7 @@ export function ClubCard({
 			<p>{currentBook.author}</p>
 			{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
 			<DeleteButton id={id} deleteClub={deleteClub} />
+			<DetailsButton id={id} showClub={showClub} />
 		</div>
 	);
 }
