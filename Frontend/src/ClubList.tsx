@@ -1,10 +1,20 @@
 import { ClubCard } from "./ClubCard";
-import { useClubs } from "./useClubs";
+import type { BookClub } from "./callApi";
 
-export function ClubList() {
-	// uso o hook criado em useClubs
-	// Atualizei o ClubList com o delete
-	const { clubs, deleteClub, updateClub, showClub } = useClubs();
+//O App controla a navegação e agora ClubList precisa receber via props em vez de de ir buscar ao useClubs, uma vez que useClubs subiu para o App
+type ClubListProps = {
+	clubs: BookClub[];
+	deleteClub: (id: number) => void;
+	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
+	showClub: (id: number) => void;
+};
+
+export function ClubList({
+	clubs,
+	deleteClub,
+	updateClub,
+	showClub,
+}: ClubListProps) {
 	// percorro o array através de map
 	return (
 		<>
