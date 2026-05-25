@@ -4,7 +4,7 @@ import { useClubs } from "./useClubs";
 export function ClubList() {
 	// uso o hook criado em useClubs
 	// Atualizei o ClubList com o delete
-	const { clubs, deleteClub, updateClub } = useClubs();
+	const { clubs, deleteClub, updateClub, showClub } = useClubs();
 	// percorro o array através de map
 	return (
 		<>
@@ -19,6 +19,7 @@ export function ClubList() {
 							{...club}
 							deleteClub={deleteClub}
 							updateClub={updateClub} /*createClub={createClub}*/
+							showClub={showClub}
 						/>
 					);
 				})}
