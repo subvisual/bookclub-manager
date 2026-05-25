@@ -15,9 +15,9 @@ export function ClubDetails({
 			<h1>{name}</h1>
 			<p>{description}</p>
 			<div className="current-book">
-			<h2>CURRENT BOOK</h2>
-			<p>{currentBook.title}</p>
-			<p>{currentBook.author}</p>
+				<h2>CURRENT BOOK</h2>
+				<p>{currentBook.title}</p>
+				<p>{currentBook.author}</p>
 			</div>
 			<div className="upcoming-books">
 				<h2>UPCOMING BOOKS</h2>

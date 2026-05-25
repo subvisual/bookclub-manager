@@ -1,8 +1,28 @@
-{"clubs":[{
+{
+	"clubs": [
+		{
 			"id": 1,
 			"name": "First Club",
 			"description": "First Club is...",
 			"currentBook": { "title": "First Book", "author": "Author 1" },
-			"upcomingBooks":  [{"title": "Upcoming Book 1", "author": "Author 1"}],
-			"pastBooks": [{"title": "Past Book 1", "author": "Author 1"}]
-		},{"id":2,"name":"Second Club","description":"Second Club is...","currentBook":{"title":"Second Book","author":"Auhtor 2"},"upcomingBooks":[],"pastBooks":[]},{"id":3,"name":"New Club","description":"Test","currentBook":{"title":"Book","author":"Author"},"upcomingBooks":[],"pastBooks":[]}]}
+			"upcomingBooks": [{ "title": "Upcoming Book 1", "author": "Author 1" }],
+			"pastBooks": [{ "title": "Past Book 1", "author": "Author 1" }]
+		},
+		{
+			"id": 2,
+			"name": "Second Club",
+			"description": "Second Club is...",
+			"currentBook": { "title": "Second Book", "author": "Auhtor 2" },
+			"upcomingBooks": [],
+			"pastBooks": []
+		},
+		{
+			"id": 3,
+			"name": "New Club",
+			"description": "Test",
+			"currentBook": { "title": "Book", "author": "Author" },
+			"upcomingBooks": [],
+			"pastBooks": []
+		}
+	]
+}
