@@ -14,9 +14,13 @@ export function ClubDetails({
 		<div>
 			<h1>{name}</h1>
 			<p>{description}</p>
+			<div className="current-book">
+			<h2>CURRENT BOOK</h2>
 			<p>{currentBook.title}</p>
 			<p>{currentBook.author}</p>
-			<div>
+			</div>
+			<div className="upcoming-books">
+				<h2>UPCOMING BOOKS</h2>
 				{upcomingBooks.map((book) => {
 					return (
 						<div key={book.title}>
@@ -32,7 +36,8 @@ export function ClubDetails({
 					);
 				})}
 			</div>
-			<div>
+			<div className="past-books">
+				<h2>PAST BOOKS</h2>
 				{pastBooks.map((book) => {
 					return (
 						<div key={book.title}>

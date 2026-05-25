@@ -26,3 +26,24 @@ p {
 	justify-content: space-around;
 	margin-top: 30px;
 }
+
+.current-book {
+	margin-top: 30px;
+	border: 1px solid #b47a65;
+	border-radius: 5px;
+	padding: 20px;
+	max-width: 100%;
+	text-align: left;
+}
+
+.upcoming-books {
+	text-align: left;
+	margin-top: 30px;
+	padding: 20px;
+}
+
+.past-books {
+	text-align: left;
+margin-top: 30px;
+	padding: 20px;
+}
