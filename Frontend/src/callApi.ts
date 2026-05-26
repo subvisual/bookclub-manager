@@ -7,11 +7,18 @@ export interface BookClub {
 	// Lista de livros no []
 	upcomingBooks: Book[];
 	pastBooks: Book[];
+	meetings: Meeting[];
 }
 
 export interface Book {
 	title: string;
 	author: string;
+}
+
+export interface Meeting {
+	date: string;
+	time: string;
+	place: string;
 }
 
 export const url = "http://localhost:3000/clubs";

@@ -9,6 +9,7 @@ export function ClubDetails({
 	currentBook,
 	upcomingBooks,
 	pastBooks,
+	meetings,
 }: ClubDetailsProps) {
 	return (
 		<div>
@@ -48,6 +49,18 @@ export function ClubDetails({
 							<div>
 								<p>{book.author}</p>
 							</div>
+						</div>
+					);
+				})}
+			</div>
+			<div className="upcoming-meetings">
+				<h2>UPCOMING MEETINGS</h2>
+				{meetings.map((meeting) => {
+					return (
+						<div key={meeting.date}>
+							<p>{meeting.date}</p>
+							<p>{meeting.time}</p>
+							<p>{meeting.place}</p>
 						</div>
 					);
 				})}

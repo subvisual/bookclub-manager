@@ -6,7 +6,10 @@
 			"description": "First Club is...",
 			"currentBook": { "title": "First Book", "author": "Author 1" },
 			"upcomingBooks": [{ "title": "Upcoming Book 1", "author": "Author 1" }],
-			"pastBooks": [{ "title": "Past Book 1", "author": "Author 1" }]
+			"pastBooks": [{ "title": "Past Book 1", "author": "Author 1" }],
+			"meetings": [
+				{ "date": "07/23/2026", "time": "6 p.m.", "place": "Subvisual" }
+			]
 		},
 		{
 			"id": 2,
