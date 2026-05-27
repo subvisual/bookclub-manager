@@ -5,14 +5,14 @@ import type { BookClub } from "./callApi";
 type ClubListProps = {
 	clubs: BookClub[];
 	deleteClub: (id: number) => void;
-	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
+
 	showClub: (id: number) => void;
 };
 
 export function ClubList({
 	clubs,
 	deleteClub,
-	updateClub,
+
 	showClub,
 }: ClubListProps) {
 	// percorro o array através de map
@@ -28,7 +28,6 @@ export function ClubList({
 							key={club.id}
 							{...club}
 							deleteClub={deleteClub}
-							updateClub={updateClub} /*createClub={createClub}*/
 							showClub={showClub}
 						/>
 					);

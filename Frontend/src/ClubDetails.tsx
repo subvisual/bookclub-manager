@@ -1,6 +1,9 @@
+import { useState } from "react";
 import type { BookClub } from "./callApi";
 
-type ClubDetailsProps = BookClub;
+type ClubDetailsProps = BookClub & {
+	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
+};
 
 export function ClubDetails({
 	id,
@@ -10,7 +13,10 @@ export function ClubDetails({
 	upcomingBooks,
 	pastBooks,
 	meetings,
+	updateClub,
 }: ClubDetailsProps) {
+	const [showForm, setShowForm] = useState<boolean>(false);
+	const [title, setTitle] =
 	return (
 		<div>
 			<h1>{name}</h1>
