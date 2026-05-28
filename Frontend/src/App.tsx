@@ -12,12 +12,7 @@ function App() {
 	// Se o selectedClub for igual a null ou se o club não existir(o id n existe na lista), mostra CLubList, se não ClubDetails
 	return selectedClub == null || !club ? (
 		// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
-		<ClubList
-			showClub={showClub}
-			deleteClub={deleteClub}
-			
-			clubs={clubs}
-		/>
+		<ClubList showClub={showClub} deleteClub={deleteClub} clubs={clubs} />
 	) : (
 		<ClubDetails {...club} updateClub={updateClub} />
 	);
