@@ -15,11 +15,11 @@ function App() {
 		<ClubList
 			showClub={showClub}
 			deleteClub={deleteClub}
-			updateClub={updateClub}
+			
 			clubs={clubs}
 		/>
 	) : (
-		<ClubDetails {...club} />
+		<ClubDetails {...club} updateClub={updateClub} />
 	);
 }
 
