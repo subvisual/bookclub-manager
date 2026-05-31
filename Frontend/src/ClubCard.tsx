@@ -6,7 +6,7 @@ import { DetailsButton } from "./DetailsButton";
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
 	deleteClub: (id: number) => void;
-	updateClub: (id: number, updatedClub: Partial<BookClub>) => void;
+
 	showClub: (id: number) => void;
 };
 
@@ -20,7 +20,6 @@ export function ClubCard({
 	currentBook,
 	deleteClub,
 	showClub,
-	updateClub,
 }: ClubCardProps) {
 	return (
 		<div className="club-card">

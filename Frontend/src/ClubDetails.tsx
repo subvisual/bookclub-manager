@@ -1,6 +1,9 @@
-import type { BookClub } from "./callApi";
+import { useState } from "react";
+import type { Book, BookClub } from "./callApi";
 
-type ClubDetailsProps = BookClub;
+type ClubDetailsProps = BookClub & {
+	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
+};
 
 export function ClubDetails({
 	id,
@@ -10,7 +13,12 @@ export function ClubDetails({
 	upcomingBooks,
 	pastBooks,
 	meetings,
+	updateClub,
 }: ClubDetailsProps) {
+	//Estado para controlar o form, inicia em null para mostrar apenas quando o button é clicado
+	const [showForm, setShowForm] = useState<boolean>(false);
+	// Para novo Book
+	const [newBook, setNewBook] = useState<Book>({ title: "", author: "" });
 	return (
 		<div>
 			<h1>{name}</h1>
@@ -65,6 +73,34 @@ export function ClubDetails({
 					);
 				})}
 			</div>
+			<button type="button" onClick={() => setShowForm(true)}>
+				ADD BOOK
+			</button>
+			{showForm && (
+				<form className="forms">
+					{/*Inicia com o valor do estado newBook que é "" */}
+					{/* onChange Event Handler function, o (e) armazena cada letra presionada*/}
+					{/*e target copia = valor do input*/}
+					<p>TITLE</p>
+					<input
+						value={newBook.title}
+						onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
+					/>
+					<p>AUTHOR</p>
+					<input
+						value={newBook.author}
+						onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
+					/>
+					<button
+						type="button"
+						onClick={() =>
+							updateClub(id, { upcomingBooks: [...upcomingBooks, newBook] })
+						}
+					>
+						SUBMIT
+					</button>
+				</form>
+			)}
 		</div>
 	);
 }
