@@ -44,6 +44,45 @@ export function ClubDetails({
 						</div>
 					);
 				})}
+				<button
+					className="buttonAdd"
+					type="button"
+					onClick={() => setShowForm(true)}
+				>
+					ADD BOOK
+				</button>
+				{showForm && (
+					<form className="forms">
+						{/*Inicia com o valor do estado newBook que é "" */}
+						{/* onChange Event Handler function, o (e) armazena cada letra presionada*/}
+						{/*e target copia = valor do input*/}
+						<p>TITLE</p>
+						<input
+							value={newBook.title}
+							onChange={(e) =>
+								setNewBook({ ...newBook, title: e.target.value })
+							}
+						/>
+						<p>AUTHOR</p>
+						<input
+							value={newBook.author}
+							onChange={(e) =>
+								setNewBook({ ...newBook, author: e.target.value })
+							}
+						/>
+						<button
+							type="button"
+							onClick={() => {
+								updateClub(id, { upcomingBooks: [...upcomingBooks, newBook] });
+								//Feche o form quando termina
+								setShowForm(false);
+								setNewBook({ title: "", author: "" });
+							}}
+						>
+							SUBMIT
+						</button>
+					</form>
+				)}
 			</div>
 			<div className="past-books">
 				<h2>PAST BOOKS</h2>
@@ -73,34 +112,6 @@ export function ClubDetails({
 					);
 				})}
 			</div>
-			<button type="button" onClick={() => setShowForm(true)}>
-				ADD BOOK
-			</button>
-			{showForm && (
-				<form className="forms">
-					{/*Inicia com o valor do estado newBook que é "" */}
-					{/* onChange Event Handler function, o (e) armazena cada letra presionada*/}
-					{/*e target copia = valor do input*/}
-					<p>TITLE</p>
-					<input
-						value={newBook.title}
-						onChange={(e) => setNewBook({ ...newBook, title: e.target.value })}
-					/>
-					<p>AUTHOR</p>
-					<input
-						value={newBook.author}
-						onChange={(e) => setNewBook({ ...newBook, author: e.target.value })}
-					/>
-					<button
-						type="button"
-						onClick={() =>
-							updateClub(id, { upcomingBooks: [...upcomingBooks, newBook] })
-						}
-					>
-						SUBMIT
-					</button>
-				</form>
-			)}
 		</div>
 	);
 }

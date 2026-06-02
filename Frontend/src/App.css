@@ -55,3 +55,14 @@ p {
 	margin-top: 30px;
 	padding: 20px;
 }
+
+.buttonAdd {
+	text-align: left;
+}
+.forms {
+	text-align: left;
+}
+.forms input {
+	display: block;
+	margin-bottom: 10px;
+}
