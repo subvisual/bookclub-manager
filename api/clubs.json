@@ -2,30 +2,240 @@
 	"clubs": [
 		{
 			"id": 1,
-			"name": "First Club",
-			"description": "First Club is...",
-			"currentBook": { "title": "First Book", "author": "Author 1" },
-			"upcomingBooks": [{ "title": "Upcoming Book 1", "author": "Author 1" }],
-			"pastBooks": [{ "title": "Past Book 1", "author": "Author 1" }],
+			"name": "Subvisual Book Club",
+			"description": "A space where curiosity leads — we read broadly, think deeply, and learn from each other.",
+			"currentBook": {
+				"title": "Thinking, Fast and Slow",
+				"author": "Daniel Kahneman"
+			},
+			"upcomingBooks": [
+				{ "title": "The Design of Everyday Things", "author": "Don Norman" },
+				{ "title": "Atomic Habits", "author": "James Clear" }
+			],
+			"pastBooks": [
+				{ "title": "Deep Work", "author": "Cal Newport" },
+				{ "title": "Shape Up", "author": "Ryan Singer" }
+			],
 			"meetings": [
-				{ "date": "07/23/2026", "time": "6 p.m.", "place": "Subvisual" }
+				{ "date": "07/10/2026", "time": "6 p.m.", "place": "Subvisual Office" },
+				{ "date": "07/24/2026", "time": "6 p.m.", "place": "Subvisual Office" }
 			]
 		},
 		{
 			"id": 2,
-			"name": "Second Club",
-			"description": "Second Club is...",
-			"currentBook": { "title": "Second Book", "author": "Auhtor 2" },
-			"upcomingBooks": [],
-			"pastBooks": []
+			"name": "Fiction Corner",
+			"description": "A cozy group for lovers of literary fiction, meeting every other week to discuss stories that move us.",
+			"currentBook": { "title": "Piranesi", "author": "Susanna Clarke" },
+			"upcomingBooks": [
+				{ "title": "The Midnight Library", "author": "Matt Haig" },
+				{ "title": "Remarkably Bright Creatures", "author": "Shelby Van Pelt" }
+			],
+			"pastBooks": [
+				{ "title": "Normal People", "author": "Sally Rooney" },
+				{ "title": "Klara and the Sun", "author": "Kazuo Ishiguro" },
+				{ "title": "A Little Life", "author": "Hanya Yanagihara" }
+			],
+			"meetings": [
+				{ "date": "07/15/2026", "time": "7 p.m.", "place": "Café Central" },
+				{ "date": "07/29/2026", "time": "7 p.m.", "place": "Café Central" },
+				{ "date": "08/12/2026", "time": "7 p.m.", "place": "Café Central" }
+			]
 		},
 		{
 			"id": 3,
-			"name": "New Club",
-			"description": "Test",
-			"currentBook": { "title": "Book", "author": "Author" },
-			"upcomingBooks": [],
-			"pastBooks": []
+			"name": "Curious Minds",
+			"description": "We read science, history, and everything in between — for those who can't stop asking why.",
+			"currentBook": { "title": "Sapiens", "author": "Yuval Noah Harari" },
+			"upcomingBooks": [
+				{
+					"title": "The Pragmatic Programmer",
+					"author": "David Thomas & Andrew Hunt"
+				},
+				{
+					"title": "A Short History of Nearly Everything",
+					"author": "Bill Bryson"
+				},
+				{ "title": "The Code Book", "author": "Simon Singh" }
+			],
+			"pastBooks": [
+				{ "title": "Educated", "author": "Tara Westover" },
+				{
+					"title": "The Immortal Life of Henrietta Lacks",
+					"author": "Rebecca Skloot"
+				}
+			],
+			"meetings": [
+				{ "date": "07/18/2026", "time": "5 p.m.", "place": "Online" },
+				{ "date": "08/01/2026", "time": "5 p.m.", "place": "Online" }
+			]
+		},
+		{
+			"id": 4,
+			"name": "Page Against the Machine",
+			"description": "Fiction with a tech twist — we love stories that challenge how we think about technology, society, and the future.",
+			"currentBook": {
+				"title": "Tomorrow, and Tomorrow, and Tomorrow",
+				"author": "Gabrielle Zevin"
+			},
+			"upcomingBooks": [
+				{ "title": "The Circle", "author": "Dave Eggers" },
+				{ "title": "Neuromancer", "author": "William Gibson" }
+			],
+			"pastBooks": [
+				{ "title": "Oryx and Crake", "author": "Margaret Atwood" },
+				{ "title": "The Peripheral", "author": "William Gibson" },
+				{
+					"title": "Do Androids Dream of Electric Sheep?",
+					"author": "Philip K. Dick"
+				}
+			],
+			"meetings": [
+				{ "date": "07/12/2026", "time": "6:30 p.m.", "place": "Braga Library" },
+				{ "date": "07/26/2026", "time": "6:30 p.m.", "place": "Braga Library" },
+				{ "date": "08/09/2026", "time": "6:30 p.m.", "place": "Online" }
+			]
+		},
+		{
+			"id": 5,
+			"name": "The Classics Club",
+			"description": "Revisiting the great novels that shaped modern literature — one masterpiece at a time.",
+			"currentBook": { "title": "Anna Karenina", "author": "Leo Tolstoy" },
+			"upcomingBooks": [
+				{ "title": "Middlemarch", "author": "George Eliot" },
+				{ "title": "Crime and Punishment", "author": "Fyodor Dostoevsky" }
+			],
+			"pastBooks": [
+				{ "title": "Madame Bovary", "author": "Gustave Flaubert" },
+				{ "title": "Jane Eyre", "author": "Charlotte Brontë" },
+				{ "title": "The Brothers Karamazov", "author": "Fyodor Dostoevsky" }
+			],
+			"meetings": [
+				{
+					"date": "07/20/2026",
+					"time": "4 p.m.",
+					"place": "Porto City Library"
+				},
+				{
+					"date": "08/03/2026",
+					"time": "4 p.m.",
+					"place": "Porto City Library"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "Short & Sweet",
+			"description": "For busy readers — we focus on short stories, novellas, and essays that pack a punch.",
+			"currentBook": { "title": "Exhalation", "author": "Ted Chiang" },
+			"upcomingBooks": [
+				{ "title": "Men Without Women", "author": "Haruki Murakami" },
+				{
+					"title": "Her Body and Other Parties",
+					"author": "Carmen Maria Machado"
+				}
+			],
+			"pastBooks": [
+				{ "title": "Interpreter of Maladies", "author": "Jhumpa Lahiri" },
+				{ "title": "The Bloody Chamber", "author": "Angela Carter" }
+			],
+			"meetings": [
+				{ "date": "07/11/2026", "time": "8 p.m.", "place": "Online" },
+				{ "date": "07/25/2026", "time": "8 p.m.", "place": "Online" },
+				{ "date": "08/08/2026", "time": "8 p.m.", "place": "Online" }
+			]
+		},
+		{
+			"id": 7,
+			"name": "Sunday Morning Readers",
+			"description": "A slow and cozy reading group that meets on Sunday mornings over coffee and good conversation.",
+			"currentBook": {
+				"title": "The Remains of the Day",
+				"author": "Kazuo Ishiguro"
+			},
+			"upcomingBooks": [
+				{ "title": "Stoner", "author": "John Williams" },
+				{
+					"title": "The Unlikely Pilgrimage of Harold Fry",
+					"author": "Rachel Joyce"
+				}
+			],
+			"pastBooks": [
+				{ "title": "A Gentleman in Moscow", "author": "Amor Towles" },
+				{ "title": "The Enchanted April", "author": "Elizabeth von Arnim" },
+				{ "title": "Major Pettigrew's Last Stand", "author": "Helen Simonson" }
+			],
+			"meetings": [
+				{
+					"date": "07/13/2026",
+					"time": "10 a.m.",
+					"place": "Pastelaria Cristal"
+				},
+				{
+					"date": "07/27/2026",
+					"time": "10 a.m.",
+					"place": "Pastelaria Cristal"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"name": "Plot Twist",
+			"description": "We live for the unexpected — thrillers, mysteries, and psychological fiction that keep us guessing until the last page.",
+			"currentBook": { "title": "The Secret History", "author": "Donna Tartt" },
+			"upcomingBooks": [
+				{ "title": "Gone Girl", "author": "Gillian Flynn" },
+				{ "title": "The Silent Patient", "author": "Alex Michaelides" }
+			],
+			"pastBooks": [
+				{ "title": "Big Little Lies", "author": "Liane Moriarty" },
+				{
+					"title": "The Girl with the Dragon Tattoo",
+					"author": "Stieg Larsson"
+				},
+				{ "title": "In the Woods", "author": "Tana French" }
+			],
+			"meetings": [
+				{
+					"date": "07/14/2026",
+					"time": "7:30 p.m.",
+					"place": "Livraria Bertrand"
+				},
+				{
+					"date": "07/28/2026",
+					"time": "7:30 p.m.",
+					"place": "Livraria Bertrand"
+				},
+				{ "date": "08/11/2026", "time": "7:30 p.m.", "place": "Online" }
+			]
+		},
+		{
+			"id": 9,
+			"name": "Verso & Prosa",
+			"description": "Um clube para leitores portugueses — misturamos ficção nacional e internacional, em português e inglês.",
+			"currentBook": {
+				"title": "Ensaio Sobre a Cegueira",
+				"author": "José Saramago"
+			},
+			"upcomingBooks": [
+				{ "title": "O Deus das Pequenas Coisas", "author": "Arundhati Roy" },
+				{ "title": "Memorial do Convento", "author": "José Saramago" }
+			],
+			"pastBooks": [
+				{ "title": "Os Maias", "author": "Eça de Queirós" },
+				{ "title": "Aparição", "author": "Vergílio Ferreira" }
+			],
+			"meetings": [
+				{
+					"date": "07/16/2026",
+					"time": "6 p.m.",
+					"place": "Casa da Cultura, Braga"
+				},
+				{
+					"date": "07/30/2026",
+					"time": "6 p.m.",
+					"place": "Casa da Cultura, Braga"
+				}
+			]
 		}
 	]
 }
