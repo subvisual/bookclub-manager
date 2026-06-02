@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { Book, BookClub } from "./callApi";
+import type { Book, BookClub, Meeting } from "./callApi";
 
 type ClubDetailsProps = BookClub & {
 	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
@@ -15,10 +15,16 @@ export function ClubDetails({
 	meetings,
 	updateClub,
 }: ClubDetailsProps) {
-	//Estado para controlar o form, inicia em null para mostrar apenas quando o button é clicado
-	const [showForm, setShowForm] = useState<boolean>(false);
+	//Estado para controlar os forms, verifica se é book, meeting ou null
+	const [showForm, setShowForm] = useState<"book" | "meeting" | null>(null);
 	// Para novo Book
 	const [newBook, setNewBook] = useState<Book>({ title: "", author: "" });
+
+	const [newMeeting, setNewMeeting] = useState<Meeting>({
+		date: "",
+		time: "",
+		place: "",
+	});
 	return (
 		<div>
 			<h1>{name}</h1>
@@ -47,14 +53,14 @@ export function ClubDetails({
 				<button
 					className="buttonAdd"
 					type="button"
-					onClick={() => setShowForm(true)}
+					onClick={() => setShowForm("book")}
 				>
 					ADD BOOK
 				</button>
-				{showForm && (
+				{showForm == "book" && (
 					<form className="forms">
 						{/*Inicia com o valor do estado newBook que é "" */}
-						{/* onChange Event Handler function, o (e) armazena cada letra presionada*/}
+						{/* onChange Esimvent Handler function, o (e) armazena cada letra presionada*/}
 						{/*e target copia = valor do input*/}
 						<p>TITLE</p>
 						<input
@@ -74,8 +80,8 @@ export function ClubDetails({
 							type="button"
 							onClick={() => {
 								updateClub(id, { upcomingBooks: [...upcomingBooks, newBook] });
-								//Feche o form quando termina
-								setShowForm(false);
+								//Fecho o form quando termina
+								setShowForm(null);
 								setNewBook({ title: "", author: "" });
 							}}
 						>
@@ -111,6 +117,44 @@ export function ClubDetails({
 						</div>
 					);
 				})}
+				<button type="button" onClick={() => setShowForm("meeting")}>
+					ADD MEETING
+				</button>
+				{showForm == "meeting" && (
+					<form>
+						<p>DATE</p>
+						<input
+							value={newMeeting.date}
+							onChange={(e) =>
+								setNewMeeting({ ...newMeeting, date: e.target.value })
+							}
+						/>
+						<p>TIME</p>
+						<input
+							value={newMeeting.time}
+							onChange={(e) =>
+								setNewMeeting({ ...newMeeting, time: e.target.value })
+							}
+						/>
+						<p>PLACE</p>
+						<input
+							value={newMeeting.place}
+							onChange={(e) =>
+								setNewMeeting({ ...newMeeting, place: e.target.value })
+							}
+						/>
+						<button
+							type="button"
+							onClick={() => {
+								updateClub(id, { meetings: [...meetings, newMeeting] });
+								setShowForm(null);
+								setNewMeeting({ date: "", time: "", place: "" });
+							}}
+						>
+							SUBMIT
+						</button>
+					</form>
+				)}
 			</div>
 		</div>
 	);
