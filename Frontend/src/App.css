@@ -19,12 +19,17 @@ p {
 	border-radius: 5px;
 	justify-content: center;
 	padding: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	width: calc((100% - 40px) / 3);
 }
 
 .club-list {
 	display: flex;
 	justify-content: space-around;
 	margin-top: 30px;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .current-book {
