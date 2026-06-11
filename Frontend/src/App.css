@@ -15,8 +15,9 @@ p {
 }
 
 .club-card {
-	border: 1px solid #b47a65;
-	border-radius: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #e4dac8;;
+	border-radius: 8px;
 	padding: 20px;
 	box-sizing: border-box;
 	overflow: hidden;
@@ -37,6 +38,13 @@ p {
 	.club-card {
 		width: 100%;
 	}
+}
+
+.club-card:hover {
+	border: 1px solid #B47A65;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+	position: relative;
+	top: -5px;
 }
 
 .club-list {
