@@ -17,11 +17,26 @@ p {
 .club-card {
 	border: 1px solid #b47a65;
 	border-radius: 5px;
-	justify-content: center;
 	padding: 20px;
 	box-sizing: border-box;
 	overflow: hidden;
 	width: calc((100% - 40px) / 3);
+	height: 250px;
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+	.club-card {
+		width: calc((100% - 20px) / 2);
+	}
+}
+
+@media (max-width: 600px) {
+	.club-card {
+		width: 100%;
+	}
 }
 
 .club-list {
@@ -70,4 +85,16 @@ p {
 .forms input {
 	display: block;
 	margin-bottom: 10px;
+}
+
+.book-card {
+	width: 90px;
+	height: 130px;
+	background-color: #849483;
+	border-radius: 3px;
+	flex-shrink: 0;
+}
+
+.club-card-info {
+	text-align: left;
 }
