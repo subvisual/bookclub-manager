@@ -1,13 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Quicksand:wght@300;400;500&display=swap");
+
 body {
 	background-color: #fefcf7;
+	border: #849483;
+	font-family: "Quicksand", sans-serif;
 }
 
 h1 {
 	color: #b47a65;
+	font-family: "Josefin Sand", sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
 }
 
 h2 {
 	color: #2c3e50;
+	font-family: "Josefin Sand", sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.5px;
 }
 
 p {

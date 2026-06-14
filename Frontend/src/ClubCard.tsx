@@ -26,7 +26,7 @@ export function ClubCard({
 			<div className="book-card"></div>
 			<div className="club-card-info">
 				<h2>{name}</h2>
-				{/*<p>{description}</p>*/}
+				<p>{description}</p>
 				<p>{currentBook.title}</p>
 				<p>{currentBook.author}</p>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
