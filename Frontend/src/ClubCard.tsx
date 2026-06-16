@@ -20,6 +20,7 @@ export function ClubCard({
 	currentBook,
 	deleteClub,
 	showClub,
+	meetings,
 }: ClubCardProps) {
 	return (
 		<div className="club-card">
@@ -27,8 +28,10 @@ export function ClubCard({
 			<div className="club-card-info">
 				<h2>{name}</h2>
 				<p>{description}</p>
+				<h3>Now reading</h3>
 				<p>{currentBook.title}</p>
 				<p>{currentBook.author}</p>
+				<h3>Next meeting •</h3> <p>{/*meetings.date*/}</p>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
 				<DeleteButton id={id} deleteClub={deleteClub} />
 				<DetailsButton id={id} showClub={showClub} />
