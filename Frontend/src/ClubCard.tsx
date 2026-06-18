@@ -23,15 +23,19 @@ export function ClubCard({
 	meetings,
 }: ClubCardProps) {
 	return (
-		<div className="club-card">
+		<div className="club-card" onClick={() => showClub(id)}>
 			<div className="book-card"></div>
 			<div className="club-card-info">
 				<h2>{name}</h2>
 				<p>{description}</p>
 				<h3>Now reading</h3>
-				<p>{currentBook.title}</p>
-				<p>{currentBook.author}</p>
-				<h3>Next meeting •</h3> <p>{/*meetings.date*/}</p>
+				<p>
+					{currentBook.title}, by {currentBook.author}
+				</p>
+				<hr />
+				<h3>
+					Next meeting • <span>{meetings[0].date}</span>
+				</h3>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
 				<DeleteButton id={id} deleteClub={deleteClub} />
 				<DetailsButton id={id} showClub={showClub} />
