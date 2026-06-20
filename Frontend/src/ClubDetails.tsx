@@ -30,7 +30,7 @@ export function ClubDetails({
 			<h1>{name}</h1>
 			<p>{description}</p>
 			<div className="current-book">
-				<h3>CURRENT BOOK</h3>
+				<h3>NOW READING</h3>
 				<p>{currentBook.title}</p>
 				<p>{currentBook.author}</p>
 			</div>
