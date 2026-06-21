@@ -7,8 +7,8 @@ type ButtonProps = {
 
 export function DeleteButton({ id, deleteClub }: ButtonProps) {
 	return (
-		<button type="button" onClick={() => deleteClub(id)}>
-			DELETE
+		<button className="buttonDel" type="button" onClick={() => deleteClub(id)}>
+			DELETE CLUB
 		</button>
 	);
 }

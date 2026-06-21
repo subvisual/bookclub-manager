@@ -37,9 +37,10 @@ export function ClubCard({
 					Next meeting • <span>{meetings[0].date}</span>
 				</h3>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
-				<DeleteButton id={id} deleteClub={deleteClub} />
-				<DetailsButton id={id} showClub={showClub} />
+
+				{/*<DetailsButton id={id} showClub={showClub} />*/}
 			</div>
+			<DeleteButton id={id} deleteClub={deleteClub} />
 		</div>
 	);
 }
