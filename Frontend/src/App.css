@@ -38,10 +38,9 @@ span {
 }
 
 hr {
-	/*para retirar a linha criada por defeito*/
-	border: none;
+	border: none; /*para retirar a linha criada por defeito*/
 	border-top: 1px solid #e4dac8;
-	margin: 16px 0 16px;
+	margin: 8px 0 16px;
 }
 
 .club-card {
@@ -50,13 +49,14 @@ hr {
 	border-radius: 8px;
 	padding: 20px;
 	box-sizing: border-box;
-	overflow: hidden;
+
 	width: calc((100% - 40px) / 3);
-	height: 250px;
+	height: 290px;
 	display: flex;
 	gap: 12px;
 	align-items: flex-start;
 	cursor: pointer;
+	position: relative;
 }
 
 @media (max-width: 900px) {
@@ -76,6 +76,34 @@ hr {
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 	position: relative;
 	top: -5px;
+}
+
+.buttonDel {
+	background-color: #3d5066;
+	color: #fefcf7;
+	border-radius: 5px;
+	border: none;
+	padding: 6px 10px;
+	position: absolute;
+	bottom: 10px;
+	right: 16px;
+	cursor: pointer;
+}
+
+.buttonDel:hover {
+	background-color: #2c3e50;
+}
+
+.club-card-info {
+	text-align: left;
+	padding-bottom: 60px;
+}
+.club-card-info p {
+	margin-bottom: 10px !important;
+}
+
+.club-card-info h3 {
+	margin-top: 4px;
 }
 
 .club-list {
@@ -132,8 +160,4 @@ hr {
 	background-color: #849483;
 	border-radius: 3px;
 	flex-shrink: 0;
-}
-
-.club-card-info {
-	text-align: left;
 }
