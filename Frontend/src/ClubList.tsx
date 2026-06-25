@@ -18,7 +18,10 @@ export function ClubList({
 	// percorro o array através de map
 	return (
 		<>
-			<h1>Book Clubs</h1>
+			<div className="header">
+				<h1>The Club Room</h1>
+				<hr className="title-divider" />
+			</div>
 			<div className="club-list">
 				{clubs.map((club) => {
 					// Passo para o card (key por causa do react)
