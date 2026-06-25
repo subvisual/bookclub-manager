@@ -24,7 +24,12 @@ export function ClubCard({
 }: ClubCardProps) {
 	return (
 		<div className="club-card" onClick={() => showClub(id)}>
-			<div className="book-card"></div>
+			<div className="book-card">
+				<div className="book-info">
+					<p className="up">{currentBook.author}</p>
+					<p>{currentBook.title}</p>
+				</div>
+			</div>
 			<div className="club-card-info">
 				<h2>{name}</h2>
 				<p>{description}</p>

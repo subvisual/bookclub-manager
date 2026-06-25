@@ -123,6 +123,38 @@ hr {
 	text-align: left;
 }
 
+.book-card {
+	width: 90px;
+	height: 130px;
+	background-color: #849483;
+	border-radius: 3px;
+	flex-shrink: 0;
+	display: flex;
+	border-left: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+	border: 1px solid #fefcf780;
+	margin: 5px;
+	height: calc(100% -15px);
+	border-radius: 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.book-info p {
+	font-size: 11px;
+	text-align: left;
+	padding: 4px;
+	color: #fefcf7;
+}
+.up {
+	text-transform: uppercase;
+	font-size: 9px;
+}
+
 .upcoming-books {
 	text-align: left;
 	margin-top: 30px;
@@ -152,12 +184,4 @@ hr {
 .forms input {
 	display: block;
 	margin-bottom: 10px;
-}
-
-.book-card {
-	width: 90px;
-	height: 130px;
-	background-color: #849483;
-	border-radius: 3px;
-	flex-shrink: 0;
 }
