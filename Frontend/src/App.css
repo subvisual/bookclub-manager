@@ -12,6 +12,8 @@ h1 {
 	font-weight: 300;
 	letter-spacing: 1px;
 	font-size: 56px;
+	text-align: left;
+	margin-bottom: 0;
 }
 
 h2 {
@@ -41,6 +43,11 @@ hr {
 	border: none; /*para retirar a linha criada por defeito*/
 	border-top: 1px solid #e4dac8;
 	margin: 8px 0 16px;
+}
+
+.title-divider {
+	border: none;
+	border-top: 1px solid #b47a65;
 }
 
 .club-card {
@@ -126,7 +133,7 @@ hr {
 .book-card {
 	width: 90px;
 	height: 130px;
-	background-color: #849483;
+	background-color: #82a87f;
 	border-radius: 3px;
 	flex-shrink: 0;
 	display: flex;
