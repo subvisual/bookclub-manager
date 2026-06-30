@@ -1,4 +1,5 @@
 import "./App.css";
+import logo from "./assets/owl-logo.png";
 import { ClubDetails } from "./ClubDetails";
 import { ClubList } from "./ClubList";
 import { useClubs } from "./useClubs";
@@ -10,11 +11,20 @@ function App() {
 	// Localizo o club por id, que é igual ao do selectedCLub
 	const club = clubs.find((club) => club.id === selectedClub);
 	// Se o selectedClub for igual a null ou se o club não existir(o id n existe na lista), mostra CLubList, se não ClubDetails
-	return selectedClub == null || !club ? (
-		// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
-		<ClubList showClub={showClub} deleteClub={deleteClub} clubs={clubs} />
-	) : (
-		<ClubDetails {...club} updateClub={updateClub} />
+	return (
+		<>
+			<div className="header">
+				<img src={logo} alt="owl logo" />
+				<h1>The Club Room</h1>
+			</div>
+			<hr className="title-divider" />
+			{selectedClub == null || !club ? (
+				// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
+				<ClubList showClub={showClub} deleteClub={deleteClub} clubs={clubs} />
+			) : (
+				<ClubDetails {...club} updateClub={updateClub} />
+			)}
+		</>
 	);
 }
 
