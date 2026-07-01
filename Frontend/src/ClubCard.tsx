@@ -33,10 +33,12 @@ export function ClubCard({
 			<div className="club-card-info">
 				<h2>{name}</h2>
 				<p>{description}</p>
-				<h3>Now reading</h3>
-				<p>
-					{currentBook.title}, by {currentBook.author}
-				</p>
+				<div className="current-book-info">
+					<h3>Now reading</h3>
+					<p>
+						{currentBook.title}, by {currentBook.author}
+					</p>
+				</div>
 				<hr />
 				<h3>
 					Next meeting • <span>{meetings[0].date}</span>
