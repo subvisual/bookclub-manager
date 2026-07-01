@@ -27,9 +27,10 @@ export function ClubDetails({
 	});
 	return (
 		<div>
-			<h1>{name}</h1>
+			<h2 className="club-title">{name}</h2>
 			<p>{description}</p>
 			<div className="current-book">
+				<div className="book-card"></div>
 				<h3>NOW READING</h3>
 				<p>{currentBook.title}</p>
 				<p>{currentBook.author}</p>
