@@ -1,8 +1,4 @@
 :root {
-	--border: #e5e4e7;
-
-	--mono: ui-monospace, Consolas, monospace;
-
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -34,11 +30,9 @@
 }
 
 #root {
-	width: 1350px;
-	max-width: 100%;
+	width: 100%;
 	margin: 0 auto;
 	text-align: center;
-
 	min-height: 100svh;
 	display: flex;
 	flex-direction: column;
@@ -53,11 +47,4 @@ h2 {
 }
 p {
 	margin: 0;
-}
-
-code {
-	font-size: 15px;
-	line-height: 135%;
-	padding: 4px 8px;
-	background: var(--code-bg);
 }
