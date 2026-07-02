@@ -149,6 +149,15 @@ hr {
 	padding: 20px;
 	max-width: 100%;
 	text-align: left;
+	display: flex;
+	gap: 20px;
+	width: 30%;
+}
+
+.current-book-info {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
 }
 
 .book-card {
@@ -186,13 +195,17 @@ hr {
 .upcoming-books {
 	text-align: left;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 20px 0;
+	display: flex;
+	gap: 25px;
 }
 
 .past-books {
 	text-align: left;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 20px 0;
+	display: flex;
+	gap: 25px;
 }
 
 .upcoming-meetings {
