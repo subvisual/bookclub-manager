@@ -30,7 +30,12 @@ export function ClubDetails({
 			<h2 className="club-title">{name}</h2>
 			<p>{description}</p>
 			<div className="current-book">
-				<div className="book-card"></div>
+				<div className="book-card">
+					<div className="book-info">
+						<p className="up">{currentBook.author}</p>
+						<p>{currentBook.title}</p>
+					</div>
+				</div>
 				<div className="current-book-info">
 					<h3>NOW READING</h3>
 					<p>{currentBook.title}, </p>
@@ -91,22 +96,21 @@ export function ClubDetails({
 					</form>
 				)}
 			</div>
+			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>PAST BOOKS</h2>
 			<div className="past-books">
-				<h2>PAST BOOKS</h2>
 				{pastBooks.map((book) => {
 					return (
-						<div key={book.title}>
-							<div>
+						<div key={book.title} className="book-card">
+							<div className="book-info">
 								{" "}
+								<p className="up">{book.author}</p>
 								<p>{book.title}</p>
-							</div>
-							<div>
-								<p>{book.author}</p>
 							</div>
 						</div>
 					);
 				})}
 			</div>
+
 			<div className="upcoming-meetings">
 				<h2>UPCOMING MEETINGS</h2>
 				{meetings.map((meeting) => {
