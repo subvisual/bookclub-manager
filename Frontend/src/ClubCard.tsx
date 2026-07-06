@@ -1,4 +1,5 @@
 //Importo a interface
+import { BookItem } from "./BookItem";
 import type { BookClub } from "./callApi";
 import { DeleteButton } from "./DeleteButton";
 import { DetailsButton } from "./DetailsButton";
@@ -24,12 +25,7 @@ export function ClubCard({
 }: ClubCardProps) {
 	return (
 		<div className="club-card" onClick={() => showClub(id)}>
-			<div className="book-card">
-				<div className="book-info">
-					<p className="up">{currentBook.author}</p>
-					<p>{currentBook.title}</p>
-				</div>
-			</div>
+			<BookItem book={currentBook} />
 			<div className="club-card-info">
 				<h2>{name}</h2>
 				<p>{description}</p>
