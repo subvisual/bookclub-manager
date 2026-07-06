@@ -203,7 +203,9 @@ hr {
 .past-books {
 	text-align: left;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 20px 0;
+	display: flex;
+	gap: 25px;
 }
 
 .upcoming-meetings {
