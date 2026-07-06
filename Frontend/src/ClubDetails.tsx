@@ -31,22 +31,22 @@ export function ClubDetails({
 			<p>{description}</p>
 			<div className="current-book">
 				<div className="book-card"></div>
-				<h3>NOW READING</h3>
-				<p>{currentBook.title}</p>
-				<p>{currentBook.author}</p>
+				<div className="current-book-info">
+					<h3>NOW READING</h3>
+					<p>{currentBook.title}, </p>
+					<p> by {currentBook.author} </p>
+				</div>
 			</div>
+			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>
+				UPCOMING BOOKS
+			</h2>
 			<div className="upcoming-books">
-				<h2>UPCOMING BOOKS</h2>
 				{upcomingBooks.map((book) => {
 					return (
-						<div key={book.title}>
-							<div>
+						<div key={book.title} className="book-card">
+							<div className="book-info">
 								{" "}
-								<p>{book.title}</p>
-							</div>
-							<div>
-								{" "}
-								<p>{book.author}</p>
+								<p className="up">{book.author}</p> <p>{book.title}</p>
 							</div>
 						</div>
 					);
