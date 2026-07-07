@@ -149,6 +149,15 @@ hr {
 	padding: 20px;
 	max-width: 100%;
 	text-align: left;
+	display: flex;
+	gap: 20px;
+	width: 30%;
+}
+
+.current-book-info {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
 }
 
 .book-card {
@@ -186,21 +195,33 @@ hr {
 .upcoming-books {
 	text-align: left;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 20px 0;
+	display: flex;
+	gap: 25px;
 }
 
 .past-books {
 	text-align: left;
 	margin-top: 30px;
-	padding: 20px;
+	padding: 20px 0;
+	display: flex;
+	gap: 25px;
 }
 
 .upcoming-meetings {
-	border: 1px solid #849483;
+	border: 1px solid #b47a65;
 	border-radius: 5px;
 	text-align: left;
 	margin-top: 30px;
 	padding: 20px;
+}
+
+.club-layout {
+	display: flex;
+	gap: 100px;
+	margin-top: 25px;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 .buttonAdd {

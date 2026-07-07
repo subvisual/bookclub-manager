@@ -30,12 +30,65 @@ export function ClubDetails({
 		<div>
 			<h2 className="club-title">{name}</h2>
 			<p>{description}</p>
-			<div className="current-book">
-				<BookItem book={currentBook} />
-				<div className="current-book-info">
-					<h3>NOW READING</h3>
-					<p>{currentBook.title}, </p>
-					<p> by {currentBook.author} </p>
+			<div className="club-layout">
+				<div className="current-book">
+					<BookItem book={currentBook} />
+					<div className="current-book-info">
+						<h3>NOW READING</h3>
+						<p>{currentBook.title}, </p>
+						<p> by {currentBook.author} </p>
+					</div>
+				</div>
+				<div className="upcoming-meetings">
+					<h2>UPCOMING MEETINGS</h2>
+					{meetings.map((meeting) => {
+						return (
+							<div key={meeting.date}>
+								<p>{meeting.date}</p>
+								<p>{meeting.time}</p>
+								<p>{meeting.place}</p>
+								<hr />
+							</div>
+						);
+					})}
+					<button type="button" onClick={() => setShowForm("meeting")}>
+						ADD MEETING
+					</button>
+					{showForm == "meeting" && (
+						<form>
+							<p>DATE</p>
+							<input
+								value={newMeeting.date}
+								onChange={(e) =>
+									setNewMeeting({ ...newMeeting, date: e.target.value })
+								}
+							/>
+							<p>TIME</p>
+							<input
+								value={newMeeting.time}
+								onChange={(e) =>
+									setNewMeeting({ ...newMeeting, time: e.target.value })
+								}
+							/>
+							<p>PLACE</p>
+							<input
+								value={newMeeting.place}
+								onChange={(e) =>
+									setNewMeeting({ ...newMeeting, place: e.target.value })
+								}
+							/>
+							<button
+								type="button"
+								onClick={() => {
+									updateClub(id, { meetings: [...meetings, newMeeting] });
+									setShowForm(null);
+									setNewMeeting({ date: "", time: "", place: "" });
+								}}
+							>
+								SUBMIT
+							</button>
+						</form>
+					)}
 				</div>
 			</div>
 			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>
@@ -90,57 +143,6 @@ export function ClubDetails({
 				{pastBooks.map((book) => {
 					return <BookItem key={book.title} book={book} />;
 				})}
-			</div>
-
-			<div className="upcoming-meetings">
-				<h2>UPCOMING MEETINGS</h2>
-				{meetings.map((meeting) => {
-					return (
-						<div key={meeting.date}>
-							<p>{meeting.date}</p>
-							<p>{meeting.time}</p>
-							<p>{meeting.place}</p>
-						</div>
-					);
-				})}
-				<button type="button" onClick={() => setShowForm("meeting")}>
-					ADD MEETING
-				</button>
-				{showForm == "meeting" && (
-					<form>
-						<p>DATE</p>
-						<input
-							value={newMeeting.date}
-							onChange={(e) =>
-								setNewMeeting({ ...newMeeting, date: e.target.value })
-							}
-						/>
-						<p>TIME</p>
-						<input
-							value={newMeeting.time}
-							onChange={(e) =>
-								setNewMeeting({ ...newMeeting, time: e.target.value })
-							}
-						/>
-						<p>PLACE</p>
-						<input
-							value={newMeeting.place}
-							onChange={(e) =>
-								setNewMeeting({ ...newMeeting, place: e.target.value })
-							}
-						/>
-						<button
-							type="button"
-							onClick={() => {
-								updateClub(id, { meetings: [...meetings, newMeeting] });
-								setShowForm(null);
-								setNewMeeting({ date: "", time: "", place: "" });
-							}}
-						>
-							SUBMIT
-						</button>
-					</form>
-				)}
 			</div>
 		</div>
 	);
