@@ -17,21 +17,19 @@ export function ClubList({
 }: ClubListProps) {
 	// percorro o array através de map
 	return (
-		<>
-			<div className="club-list">
-				{clubs.map((club) => {
-					// Passo para o card (key por causa do react)
-					//Atualizei o card com
-					return (
-						<ClubCard
-							key={club.id}
-							{...club}
-							deleteClub={deleteClub}
-							showClub={showClub}
-						/>
-					);
-				})}
-			</div>
-		</>
+		<div className="club-list">
+			{clubs.map((club) => {
+				// Passo para o card (key por causa do react)
+				//Atualizei o card com
+				return (
+					<ClubCard
+						key={club.id}
+						{...club}
+						deleteClub={deleteClub}
+						showClub={showClub}
+					/>
+				);
+			})}
+		</div>
 	);
 }

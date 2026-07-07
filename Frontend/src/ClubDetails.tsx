@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { BookItem } from "./BookItem";
 import type { Book, BookClub, Meeting } from "./callApi";
 
 type ClubDetailsProps = BookClub & {
@@ -30,12 +31,7 @@ export function ClubDetails({
 			<h2 className="club-title">{name}</h2>
 			<p>{description}</p>
 			<div className="current-book">
-				<div className="book-card">
-					<div className="book-info">
-						<p className="up">{currentBook.author}</p>
-						<p>{currentBook.title}</p>
-					</div>
-				</div>
+				<BookItem book={currentBook} />
 				<div className="current-book-info">
 					<h3>NOW READING</h3>
 					<p>{currentBook.title}, </p>
@@ -47,14 +43,7 @@ export function ClubDetails({
 			</h2>
 			<div className="upcoming-books">
 				{upcomingBooks.map((book) => {
-					return (
-						<div key={book.title} className="book-card">
-							<div className="book-info">
-								{" "}
-								<p className="up">{book.author}</p> <p>{book.title}</p>
-							</div>
-						</div>
-					);
+					return <BookItem key={book.title} book={book} />;
 				})}
 				<button
 					className="buttonAdd"
@@ -99,15 +88,7 @@ export function ClubDetails({
 			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>PAST BOOKS</h2>
 			<div className="past-books">
 				{pastBooks.map((book) => {
-					return (
-						<div key={book.title} className="book-card">
-							<div className="book-info">
-								{" "}
-								<p className="up">{book.author}</p>
-								<p>{book.title}</p>
-							</div>
-						</div>
-					);
+					return <BookItem key={book.title} book={book} />;
 				})}
 			</div>
 
