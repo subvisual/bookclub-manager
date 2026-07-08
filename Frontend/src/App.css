@@ -151,7 +151,6 @@ hr {
 	text-align: left;
 	display: flex;
 	gap: 20px;
-	width: 30%;
 }
 
 .current-book-info {
@@ -222,6 +221,13 @@ hr {
 	margin-top: 25px;
 	align-items: flex-start;
 	justify-content: center;
+}
+
+.books-layout {
+	flex: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 40px;
 }
 
 .buttonAdd {

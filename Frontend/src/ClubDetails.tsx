@@ -31,14 +31,75 @@ export function ClubDetails({
 			<h2 className="club-title">{name}</h2>
 			<p>{description}</p>
 			<div className="club-layout">
-				<div className="current-book">
-					<BookItem book={currentBook} />
-					<div className="current-book-info">
-						<h3>NOW READING</h3>
-						<p>{currentBook.title}, </p>
-						<p> by {currentBook.author} </p>
+				<div className="books-layout">
+					<div className="current-book">
+						<BookItem book={currentBook} />
+						<div className="current-book-info">
+							<h3>NOW READING</h3>
+							<p>{currentBook.title}, </p>
+							<p> by {currentBook.author} </p>
+						</div>
+					</div>
+
+					<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>
+						UPCOMING BOOKS
+					</h2>
+					<div className="upcoming-books">
+						{upcomingBooks.map((book) => {
+							return <BookItem key={book.title} book={book} />;
+						})}
+						<button
+							className="buttonAdd"
+							type="button"
+							onClick={() => setShowForm("book")}
+						>
+							ADD BOOK
+						</button>
+						{showForm == "book" && (
+							<form className="forms">
+								{/*Inicia com o valor do estado newBook que é "" */}
+								{/* onChange Esimvent Handler function, o (e) armazena cada letra presionada*/}
+								{/*e target copia = valor do input*/}
+								<p>TITLE</p>
+								<input
+									value={newBook.title}
+									onChange={(e) =>
+										setNewBook({ ...newBook, title: e.target.value })
+									}
+								/>
+								<p>AUTHOR</p>
+								<input
+									value={newBook.author}
+									onChange={(e) =>
+										setNewBook({ ...newBook, author: e.target.value })
+									}
+								/>
+								<button
+									type="button"
+									onClick={() => {
+										updateClub(id, {
+											upcomingBooks: [...upcomingBooks, newBook],
+										});
+										//Fecho o form quando termina
+										setShowForm(null);
+										setNewBook({ title: "", author: "" });
+									}}
+								>
+									SUBMIT
+								</button>
+							</form>
+						)}
+					</div>
+					<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>
+						PAST BOOKS
+					</h2>
+					<div className="past-books">
+						{pastBooks.map((book) => {
+							return <BookItem key={book.title} book={book} />;
+						})}
 					</div>
 				</div>
+
 				<div className="upcoming-meetings">
 					<h2>UPCOMING MEETINGS</h2>
 					{meetings.map((meeting) => {
@@ -90,59 +151,6 @@ export function ClubDetails({
 						</form>
 					)}
 				</div>
-			</div>
-			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>
-				UPCOMING BOOKS
-			</h2>
-			<div className="upcoming-books">
-				{upcomingBooks.map((book) => {
-					return <BookItem key={book.title} book={book} />;
-				})}
-				<button
-					className="buttonAdd"
-					type="button"
-					onClick={() => setShowForm("book")}
-				>
-					ADD BOOK
-				</button>
-				{showForm == "book" && (
-					<form className="forms">
-						{/*Inicia com o valor do estado newBook que é "" */}
-						{/* onChange Esimvent Handler function, o (e) armazena cada letra presionada*/}
-						{/*e target copia = valor do input*/}
-						<p>TITLE</p>
-						<input
-							value={newBook.title}
-							onChange={(e) =>
-								setNewBook({ ...newBook, title: e.target.value })
-							}
-						/>
-						<p>AUTHOR</p>
-						<input
-							value={newBook.author}
-							onChange={(e) =>
-								setNewBook({ ...newBook, author: e.target.value })
-							}
-						/>
-						<button
-							type="button"
-							onClick={() => {
-								updateClub(id, { upcomingBooks: [...upcomingBooks, newBook] });
-								//Fecho o form quando termina
-								setShowForm(null);
-								setNewBook({ title: "", author: "" });
-							}}
-						>
-							SUBMIT
-						</button>
-					</form>
-				)}
-			</div>
-			<h2 style={{ marginTop: "50px", marginBottom: "-25px" }}>PAST BOOKS</h2>
-			<div className="past-books">
-				{pastBooks.map((book) => {
-					return <BookItem key={book.title} book={book} />;
-				})}
 			</div>
 		</div>
 	);
