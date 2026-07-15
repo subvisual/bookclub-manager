@@ -98,7 +98,7 @@ hr {
 	top: -5px;
 }
 
-.buttonDel {
+.buttonDark {
 	background-color: #3d5066;
 	color: #fefcf7;
 	border-radius: 5px;
@@ -147,10 +147,11 @@ hr {
 	border: 1px solid #b47a65;
 	border-radius: 5px;
 	padding: 20px;
-	max-width: 100%;
+	max-width: 750px;
 	text-align: left;
 	display: flex;
 	gap: 20px;
+	background-color: #ffffff;
 }
 
 .current-book-info {
@@ -197,6 +198,7 @@ hr {
 	padding: 20px 0;
 	display: flex;
 	gap: 25px;
+	background-color: #ffffff;
 }
 
 .past-books {
@@ -213,26 +215,54 @@ hr {
 	text-align: left;
 	margin-top: 30px;
 	padding: 20px;
+	
 }
+
 
 .club-layout {
 	display: flex;
-	gap: 100px;
+	gap: 30px;
 	margin-top: 25px;
 	align-items: flex-start;
 	justify-content: center;
+	padding-right: 170px;
 }
 
 .books-layout {
 	flex: 1;
-	max-width: 1200px;
+	max-width: 1350px;
 	margin: 0 auto;
 	padding: 0 40px;
 }
 
 .buttonAdd {
-	text-align: left;
+	font-family: "Josefin Sans", sans-serif;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+	border: 1px solid #82a87f;
+	width: 90px;
+	height: 130px;
+	
+	border-radius: 3px;
+	
 }
+.buttonAdd span {
+	display: block;
+	text-align: center;
+	color: #82a87f;
+	font-weight: 500;
+}
+
+.buttonAdd:hover {
+	border: 1px solid #b47a65;
+	
+}
+.buttonAdd:hover span{
+	color: #b47a65;
+	
+}
+
 .forms {
 	text-align: left;
 }
