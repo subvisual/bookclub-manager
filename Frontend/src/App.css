@@ -215,9 +215,7 @@ hr {
 	text-align: left;
 	margin-top: 30px;
 	padding: 20px;
-	
 }
-
 
 .club-layout {
 	display: flex;
@@ -243,9 +241,8 @@ hr {
 	border: 1px solid #82a87f;
 	width: 90px;
 	height: 130px;
-	
+
 	border-radius: 3px;
-	
 }
 .buttonAdd span {
 	display: block;
@@ -256,11 +253,9 @@ hr {
 
 .buttonAdd:hover {
 	border: 1px solid #b47a65;
-	
 }
-.buttonAdd:hover span{
+.buttonAdd:hover span {
 	color: #b47a65;
-	
 }
 
 .forms {

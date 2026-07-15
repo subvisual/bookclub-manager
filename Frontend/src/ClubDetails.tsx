@@ -55,7 +55,6 @@ export function ClubDetails({
 						>
 							<span>+</span>
 							<span>ADD BOOK</span>
-							
 						</button>
 						{showForm == "book" && (
 							<form className="forms">
@@ -114,7 +113,11 @@ export function ClubDetails({
 							</div>
 						);
 					})}
-					<button className="buttonDark" type="button" onClick={() => setShowForm("meeting")}>
+					<button
+						className="buttonDark"
+						type="button"
+						onClick={() => setShowForm("meeting")}
+					>
 						ADD MEETING
 					</button>
 					{showForm == "meeting" && (
