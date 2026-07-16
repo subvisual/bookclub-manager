@@ -43,7 +43,9 @@ export function ClubCard({
 
 				{/*<DetailsButton id={id} showClub={showClub} />*/}
 			</div>
-			<DeleteButton id={id} deleteClub={deleteClub} />
+			<div className="button-wrapper">
+				<DeleteButton id={id} deleteClub={deleteClub} />
+			</div>
 		</div>
 	);
 }
