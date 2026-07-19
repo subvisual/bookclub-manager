@@ -3,6 +3,7 @@ import { BookItem } from "./BookItem";
 import type { Book, BookClub, Meeting } from "./callApi";
 
 type ClubDetailsProps = BookClub & {
+	backToList: () => void;
 	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
 };
 
@@ -15,6 +16,7 @@ export function ClubDetails({
 	pastBooks,
 	meetings,
 	updateClub,
+	backToList,
 }: ClubDetailsProps) {
 	//Estado para controlar os forms, verifica se é book, meeting ou null
 	const [showForm, setShowForm] = useState<"book" | "meeting" | null>(null);
@@ -29,7 +31,18 @@ export function ClubDetails({
 	return (
 		<div>
 			<h2 className="club-title">{name}</h2>
-			<p>{description}</p>
+			<div className="club-header">
+				<p>{description}</p>
+
+				<button
+					className="back-clubs-button"
+					type="button"
+					onClick={() => backToList()}
+				>
+					{" "}
+					‹ Back All Clubs{" "}
+				</button>
+			</div>
 			<div className="club-layout">
 				<div className="books-layout">
 					<div className="current-book">
