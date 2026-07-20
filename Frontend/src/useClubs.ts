@@ -57,5 +57,17 @@ export function useClubs() {
 		setSelectedClub(id);
 	}
 
-	return { clubs, deleteClub, updateClub, createClub, selectedClub, showClub };
+	function backToList() {
+		setSelectedClub(null);
+	}
+
+	return {
+		clubs,
+		deleteClub,
+		updateClub,
+		createClub,
+		selectedClub,
+		showClub,
+		backToList,
+	};
 }

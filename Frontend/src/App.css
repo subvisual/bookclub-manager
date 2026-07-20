@@ -11,6 +11,11 @@
 	margin-bottom: -13px;
 }
 
+.club-header {
+	display: flex;
+	justify-content: space-between;
+}
+
 body {
 	background-color: #fefcf7;
 	border: #849483;
@@ -151,6 +156,28 @@ hr {
 	margin-top: 40px;
 }
 
+.back-clubs-button {
+	font-family: "Josefin Sans", sans-serif;
+	color: #2c3e50;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.back-clubs-button:hover {
+	background-color: #3d5066;
+	color: #ffffff;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .current-book {
 	margin-top: 30px;
 	border: 1px solid #b47a65;
@@ -251,7 +278,7 @@ hr {
 
 .buttonAdd {
 	font-family: "Josefin Sans", sans-serif;
-	border: none;
+	
 	background-color: #ffffff;
 	cursor: pointer;
 	border: 1px solid #82a87f;
@@ -269,6 +296,7 @@ hr {
 
 .buttonAdd:hover {
 	border: 1px solid #b47a65;
+	background-color: #fefcf7;
 }
 .buttonAdd:hover span {
 	color: #b47a65;
