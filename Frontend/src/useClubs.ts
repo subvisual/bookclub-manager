@@ -10,6 +10,10 @@ import {
 export function useClubs() {
 	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado.
 	const [clubs, setClubs] = useState<BookClub[]>([]);
+	// True, uma vez que quando a pagina carrega já estou a pedir dados
+	const [loading, setLoading] = useState<boolean>(true);
+	// Mensagem de erro ou null(não há erro).
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(
 		() => {
