@@ -17,10 +17,18 @@ export function useClubs() {
 
 	useEffect(
 		() => {
+			setLoading(true);
 			// A função do callApi, vai buscar os clubs
 			getBookClubs()
 				// passa os clubs para setClubs
-				.then(setClubs);
+				.then((clubsData) => {
+					setClubs(clubsData);
+					setLoading(false);
+				})
+				.catch((err) => {
+					setError(err);
+					setLoading(false);
+				});
 		},
 		// Para só executar uma vez
 		[],
@@ -73,5 +81,7 @@ export function useClubs() {
 		selectedClub,
 		showClub,
 		backToList,
+		loading,
+		error,
 	};
 }

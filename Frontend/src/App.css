@@ -63,6 +63,15 @@ hr {
 	margin: 8px 0 16px;
 }
 
+.message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*Ocupa a altura do ecrã, para centrar na vertical*/
+	height: 100vh;
+	font-size: x-large;
+}
+
 .title-divider {
 	border: none;
 	border-top: 1px solid #b47a65;
