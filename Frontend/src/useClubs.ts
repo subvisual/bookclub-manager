@@ -10,13 +10,25 @@ import {
 export function useClubs() {
 	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado.
 	const [clubs, setClubs] = useState<BookClub[]>([]);
+	// True, uma vez que quando a pagina carrega já estou a pedir dados
+	const [loading, setLoading] = useState<boolean>(true);
+	// Mensagem de erro ou null(não há erro).
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(
 		() => {
+			setLoading(true);
 			// A função do callApi, vai buscar os clubs
 			getBookClubs()
 				// passa os clubs para setClubs
-				.then(setClubs);
+				.then((clubsData) => {
+					setClubs(clubsData);
+					setLoading(false);
+				})
+				.catch((err) => {
+					setError(err);
+					setLoading(false);
+				});
 		},
 		// Para só executar uma vez
 		[],
@@ -69,5 +81,7 @@ export function useClubs() {
 		selectedClub,
 		showClub,
 		backToList,
+		loading,
+		error,
 	};
 }

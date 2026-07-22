@@ -7,11 +7,27 @@ import { useClubs } from "./useClubs";
 function App() {
 	// Uso o hook criado em useClubs para ir buscar a lista de clubs e selectedClub
 	// Fui buscar tb deleteClub e updateClub, uma vez que subiu do ClubList para o App
-	const { clubs, selectedClub, showClub, deleteClub, updateClub, backToList } =
-		useClubs();
+	const {
+		clubs,
+		selectedClub,
+		showClub,
+		deleteClub,
+		updateClub,
+		backToList,
+		loading,
+		error,
+	} = useClubs();
 	// Localizo o club por id, que é igual ao do selectedCLub
 	const club = clubs.find((club) => club.id === selectedClub);
 	// Se o selectedClub for igual a null ou se o club não existir(o id n existe na lista), mostra CLubList, se não ClubDetails
+
+	if (loading) {
+		return <p className="message">Loading...</p>;
+	}
+
+	if (error) {
+		return <p className="message">Something is wrong.</p>;
+	}
 	return (
 		<>
 			<div className="header">

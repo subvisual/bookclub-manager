@@ -63,6 +63,15 @@ hr {
 	margin: 8px 0 16px;
 }
 
+.message {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*Ocupa a altura do ecrã, para centrar na vertical*/
+	height: 100vh;
+	font-size: x-large;
+}
+
 .title-divider {
 	border: none;
 	border-top: 1px solid #b47a65;
@@ -278,7 +287,7 @@ hr {
 
 .buttonAdd {
 	font-family: "Josefin Sans", sans-serif;
-	
+
 	background-color: #ffffff;
 	cursor: pointer;
 	border: 1px solid #82a87f;
