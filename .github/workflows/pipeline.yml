@@ -1,0 +1,7 @@
+# ci:continuous integration 
+name: ci
+on: [pull_request]
+jobs:
+  lint:
+  #maquina virtual em que vai correr o job
+    runs-on: ubuntu-latest
