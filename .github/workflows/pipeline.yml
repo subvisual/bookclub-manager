@@ -3,5 +3,11 @@ name: ci
 on: [pull_request]
 jobs:
   lint:
-  #maquina virtual em que vai correr o job
+  # maquina virtual em que vai correr o job
     runs-on: ubuntu-latest
+    steps:
+      # descarrego o código na maquina virtual
+      - uses: actions/checkout@v4
+      # na pasta Frontend instalos dependências e corro check 
+      - run: cd Frontend && npm install && npm run check
+      - run: cd api && npm install && npm run check
