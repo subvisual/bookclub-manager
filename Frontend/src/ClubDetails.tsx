@@ -69,7 +69,7 @@ export function ClubDetails({
 							<span>+</span>
 							<span>ADD BOOK</span>
 						</button>
-						{showForm == "book" && (
+						{showForm === "book" && (
 							<form className="forms">
 								{/*Inicia com o valor do estado newBook que é "" */}
 								{/* onChange Esimvent Handler function, o (e) armazena cada letra presionada*/}
@@ -133,7 +133,7 @@ export function ClubDetails({
 					>
 						ADD MEETING
 					</button>
-					{showForm == "meeting" && (
+					{showForm === "meeting" && (
 						<form>
 							<p>DATE</p>
 							<input

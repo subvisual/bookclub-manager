@@ -2,7 +2,6 @@
 import { BookItem } from "./BookItem";
 import type { BookClub } from "./callApi";
 import { DeleteButton } from "./DeleteButton";
-import { DetailsButton } from "./DetailsButton";
 
 //Para receber a function deleteClub. Extende BookClub
 type ClubCardProps = BookClub & {
@@ -24,7 +23,16 @@ export function ClubCard({
 	meetings,
 }: ClubCardProps) {
 	return (
-		<div className="club-card" onClick={() => showClub(id)}>
+		<div
+			className="club-card"
+			onClick={() => showClub(id)}
+			/* onKeyDown evento do react, tecla à escuta, neste caso a tecla enter */
+			onKeyDown={(e) => e.key === "Enter" && showClub(id)}
+			/* a div comporta-se como button */
+			role="button"
+			/* permite ativar o click através de tab */
+			tabIndex={0}
+		>
 			<BookItem book={currentBook} />
 			<div className="club-card-info">
 				<h2>{name}</h2>
@@ -40,8 +48,6 @@ export function ClubCard({
 					Next meeting • <span>{meetings[0].date}</span>
 				</h3>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
-
-				{/*<DetailsButton id={id} showClub={showClub} />*/}
 			</div>
 			<div className="button-wrapper">
 				<DeleteButton id={id} deleteClub={deleteClub} />

@@ -28,7 +28,7 @@ export const url = "http://localhost:3000/clubs";
 export function getBookClubs(): Promise<BookClub[]> {
 	// GET por defeito
 	return fetch(url).then((response) => {
-		if (response.status == 200) {
+		if (response.status === 200) {
 			return response.json().then((data) => data.clubs);
 		}
 	});
@@ -38,7 +38,7 @@ export function getBookClubs(): Promise<BookClub[]> {
 export function deleteBookClub(id: number): Promise<void> {
 	// Concatenei à const url
 	return fetch(`${url}/${id}`, { method: "DELETE" }).then((response) => {
-		if (response.status == 200) {
+		if (response.status === 200) {
 			return;
 		}
 	});
@@ -56,7 +56,7 @@ export function updateBookClub(
 		// headers indica que está a enviar json
 		headers: { "Content-Type": "application/json" },
 	}).then((response) => {
-		if (response.status == 200) {
+		if (response.status === 200) {
 			return response.json().then((data) => data);
 		}
 	});
@@ -68,7 +68,7 @@ export function createBookClub(newClub: BookClub): Promise<BookClub> {
 		body: JSON.stringify(newClub),
 		headers: { "Content-Type": "application/json" },
 	}).then((response) => {
-		if (response.status == 200) {
+		if (response.status === 200) {
 			return response.json().then((data) => data);
 		}
 	});
