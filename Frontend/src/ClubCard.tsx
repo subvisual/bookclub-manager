@@ -23,12 +23,14 @@ export function ClubCard({
 	meetings,
 }: ClubCardProps) {
 	return (
+		// biome-ignore lint/a11y/useSemanticElements: A div funciona como button mas tem um button dentro, impossível substituir div por button, cfr sugerido pelo biome
 		<div
 			className="club-card"
 			onClick={() => showClub(id)}
 			/* onKeyDown evento do react, tecla à escuta, neste caso a tecla enter */
 			onKeyDown={(e) => e.key === "Enter" && showClub(id)}
 			/* a div comporta-se como button */
+
 			role="button"
 			/* permite ativar o click através de tab */
 			tabIndex={0}
