@@ -36,7 +36,7 @@ router.put("/:id", (req, res) => {
 	// Para buscar os novos dados do clube
 	const updatedClub = req.body;
 	// Localizo o clube pelo id
-	const clubId = clubs.clubs.find((club) => club.id == id);
+	const clubId = clubs.clubs.find((club) => club.id === id);
 	// Modifica o clube encontrado, copia os dados do updatedClub para clubId
 	Object.assign(clubId, updatedClub);
 

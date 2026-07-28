@@ -48,7 +48,7 @@ export function useClubs() {
 			// Atualizo clubs, percorro o array com map, se o id é igual, substitui com dados atualizados, se não mantém os dados.
 			setClubs((clubs) =>
 				clubs.map((club) =>
-					club.id == id ? { ...club, ...updatedClub } : club,
+					club.id === id ? { ...club, ...updatedClub } : club,
 				),
 			);
 		});

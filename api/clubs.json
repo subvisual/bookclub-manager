@@ -9,182 +9,67 @@
 				"author": "Daniel Kahneman"
 			},
 			"upcomingBooks": [
-				{
-					"title": "The Design of Everyday Things",
-					"author": "Don Norman"
-				},
-				{
-					"title": "Atomic Habits",
-					"author": "James Clear"
-				},
-				{
-					"title": "Show Your Work",
-					"author": "Austin Kleon"
-				},
-				{
-					"title": "The Mom Test",
-					"author": "Rob Fitzpatrick"
-				},
-				{
-					"title": "Hooked",
-					"author": "Nir Eyal"
-				},
-				{
-					"title": "Radical Candor",
-					"author": "Kim Scott"
-				},
-				{
-					"title": "Zero to One",
-					"author": "Peter Thiel"
-				},
-				{
-					"title": "The Effective Engineer",
-					"author": "Edmond Lau"
-				},
-				{
-					"title": "Digital Minimalism",
-					"author": "Cal Newport"
-				}
+				{ "title": "The Design of Everyday Things", "author": "Don Norman" },
+				{ "title": "Atomic Habits", "author": "James Clear" },
+				{ "title": "Show Your Work", "author": "Austin Kleon" },
+				{ "title": "The Mom Test", "author": "Rob Fitzpatrick" },
+				{ "title": "Hooked", "author": "Nir Eyal" },
+				{ "title": "Radical Candor", "author": "Kim Scott" },
+				{ "title": "Zero to One", "author": "Peter Thiel" },
+				{ "title": "The Effective Engineer", "author": "Edmond Lau" },
+				{ "title": "Digital Minimalism", "author": "Cal Newport" }
 			],
 			"pastBooks": [
-				{
-					"title": "Deep Work",
-					"author": "Cal Newport"
-				},
-				{
-					"title": "Shape Up",
-					"author": "Ryan Singer"
-				},
-				{
-					"title": "Sprint",
-					"author": "Jake Knapp"
-				},
-				{
-					"title": "The Lean Startup",
-					"author": "Eric Ries"
-				},
-				{
-					"title": "Getting Real",
-					"author": "37signals"
-				},
-				{
-					"title": "Inspired",
-					"author": "Marty Cagan"
-				},
-				{
-					"title": "Don't Make Me Think",
-					"author": "Steve Krug"
-				},
-				{
-					"title": "The Design of Business",
-					"author": "Roger Martin"
-				},
+				{ "title": "Deep Work", "author": "Cal Newport" },
+				{ "title": "Shape Up", "author": "Ryan Singer" },
+				{ "title": "Sprint", "author": "Jake Knapp" },
+				{ "title": "The Lean Startup", "author": "Eric Ries" },
+				{ "title": "Getting Real", "author": "37signals" },
+				{ "title": "Inspired", "author": "Marty Cagan" },
+				{ "title": "Don't Make Me Think", "author": "Steve Krug" },
+				{ "title": "The Design of Business", "author": "Roger Martin" },
 				{
 					"title": "Rework",
 					"author": "Jason Fried & David Heinemeier Hansson"
 				}
 			],
 			"meetings": [
-				{
-					"date": "07/10/2026",
-					"time": "6 p.m.",
-					"place": "Subvisual Office"
-				},
-				{
-					"date": "07/24/2026",
-					"time": "6 p.m.",
-					"place": "Subvisual Office"
-				},
-				{
-					"date": "08/07/2026",
-					"time": "6 p.m.",
-					"place": "Subvisual Office"
-				},
-				{
-					"date": "08/21/2026",
-					"time": "6 p.m.",
-					"place": "Online"
-				}
+				{ "date": "07/10/2026", "time": "6 p.m.", "place": "Subvisual Office" },
+				{ "date": "07/24/2026", "time": "6 p.m.", "place": "Subvisual Office" },
+				{ "date": "08/07/2026", "time": "6 p.m.", "place": "Subvisual Office" },
+				{ "date": "08/21/2026", "time": "6 p.m.", "place": "Online" }
 			]
 		},
 		{
 			"id": 2,
 			"name": "Fiction Corner",
 			"description": "A cozy group for lovers of literary fiction, meeting every other week to discuss stories that move us.",
-			"currentBook": {
-				"title": "Piranesi",
-				"author": "Susanna Clarke"
-			},
+			"currentBook": { "title": "Piranesi", "author": "Susanna Clarke" },
 			"upcomingBooks": [
-				{
-					"title": "The Midnight Library",
-					"author": "Matt Haig"
-				},
-				{
-					"title": "Remarkably Bright Creatures",
-					"author": "Shelby Van Pelt"
-				},
-				{
-					"title": "Lessons in Chemistry",
-					"author": "Bonnie Garmus"
-				},
-				{
-					"title": "Demon Copperhead",
-					"author": "Barbara Kingsolver"
-				}
+				{ "title": "The Midnight Library", "author": "Matt Haig" },
+				{ "title": "Remarkably Bright Creatures", "author": "Shelby Van Pelt" },
+				{ "title": "Lessons in Chemistry", "author": "Bonnie Garmus" },
+				{ "title": "Demon Copperhead", "author": "Barbara Kingsolver" }
 			],
 			"pastBooks": [
-				{
-					"title": "Normal People",
-					"author": "Sally Rooney"
-				},
-				{
-					"title": "Klara and the Sun",
-					"author": "Kazuo Ishiguro"
-				},
-				{
-					"title": "A Little Life",
-					"author": "Hanya Yanagihara"
-				},
-				{
-					"title": "The Goldfinch",
-					"author": "Donna Tartt"
-				},
-				{
-					"title": "Circe",
-					"author": "Madeline Miller"
-				},
-				{
-					"title": "The Song of Achilles",
-					"author": "Madeline Miller"
-				}
+				{ "title": "Normal People", "author": "Sally Rooney" },
+				{ "title": "Klara and the Sun", "author": "Kazuo Ishiguro" },
+				{ "title": "A Little Life", "author": "Hanya Yanagihara" },
+				{ "title": "The Goldfinch", "author": "Donna Tartt" },
+				{ "title": "Circe", "author": "Madeline Miller" },
+				{ "title": "The Song of Achilles", "author": "Madeline Miller" }
 			],
 			"meetings": [
-				{
-					"date": "07/15/2026",
-					"time": "7 p.m.",
-					"place": "Café Central"
-				},
-				{
-					"date": "07/29/2026",
-					"time": "7 p.m.",
-					"place": "Café Central"
-				},
-				{
-					"date": "08/12/2026",
-					"time": "7 p.m.",
-					"place": "Café Central"
-				}
+				{ "date": "07/15/2026", "time": "7 p.m.", "place": "Café Central" },
+				{ "date": "07/29/2026", "time": "7 p.m.", "place": "Café Central" },
+				{ "date": "08/12/2026", "time": "7 p.m.", "place": "Café Central" }
 			]
 		},
 		{
 			"id": 3,
 			"name": "Curious Minds",
 			"description": "We read science, history, and everything in between — for those who can't stop asking why.",
-			"currentBook": {
-				"title": "Sapiens",
-				"author": "Yuval Noah Harari"
-			},
+			"currentBook": { "title": "Sapiens", "author": "Yuval Noah Harari" },
 			"upcomingBooks": [
 				{
 					"title": "The Pragmatic Programmer",
@@ -194,49 +79,22 @@
 					"title": "A Short History of Nearly Everything",
 					"author": "Bill Bryson"
 				},
-				{
-					"title": "The Code Book",
-					"author": "Simon Singh"
-				}
+				{ "title": "The Code Book", "author": "Simon Singh" }
 			],
 			"pastBooks": [
-				{
-					"title": "Educated",
-					"author": "Tara Westover"
-				},
+				{ "title": "Educated", "author": "Tara Westover" },
 				{
 					"title": "The Immortal Life of Henrietta Lacks",
 					"author": "Rebecca Skloot"
 				},
-				{
-					"title": "Cosmos",
-					"author": "Carl Sagan"
-				},
-				{
-					"title": "A Brief History of Time",
-					"author": "Stephen Hawking"
-				},
-				{
-					"title": "The Selfish Gene",
-					"author": "Richard Dawkins"
-				}
+				{ "title": "Cosmos", "author": "Carl Sagan" },
+				{ "title": "A Brief History of Time", "author": "Stephen Hawking" },
+				{ "title": "The Selfish Gene", "author": "Richard Dawkins" }
 			],
 			"meetings": [
-				{
-					"date": "07/18/2026",
-					"time": "5 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "08/01/2026",
-					"time": "5 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "08/15/2026",
-					"time": "5 p.m.",
-					"place": "Online"
-				}
+				{ "date": "07/18/2026", "time": "5 p.m.", "place": "Online" },
+				{ "date": "08/01/2026", "time": "5 p.m.", "place": "Online" },
+				{ "date": "08/15/2026", "time": "5 p.m.", "place": "Online" }
 			]
 		},
 		{
@@ -248,124 +106,47 @@
 				"author": "Gabrielle Zevin"
 			},
 			"upcomingBooks": [
-				{
-					"title": "The Circle",
-					"author": "Dave Eggers"
-				},
-				{
-					"title": "Neuromancer",
-					"author": "William Gibson"
-				},
-				{
-					"title": "Klara and the Sun",
-					"author": "Kazuo Ishiguro"
-				},
-				{
-					"title": "The Every",
-					"author": "Dave Eggers"
-				},
-				{
-					"title": "Machines Like Me",
-					"author": "Ian McEwan"
-				}
+				{ "title": "The Circle", "author": "Dave Eggers" },
+				{ "title": "Neuromancer", "author": "William Gibson" },
+				{ "title": "Klara and the Sun", "author": "Kazuo Ishiguro" },
+				{ "title": "The Every", "author": "Dave Eggers" },
+				{ "title": "Machines Like Me", "author": "Ian McEwan" }
 			],
 			"pastBooks": [
-				{
-					"title": "Oryx and Crake",
-					"author": "Margaret Atwood"
-				},
-				{
-					"title": "The Peripheral",
-					"author": "William Gibson"
-				},
+				{ "title": "Oryx and Crake", "author": "Margaret Atwood" },
+				{ "title": "The Peripheral", "author": "William Gibson" },
 				{
 					"title": "Do Androids Dream of Electric Sheep?",
 					"author": "Philip K. Dick"
 				},
-				{
-					"title": "Snow Crash",
-					"author": "Neal Stephenson"
-				}
+				{ "title": "Snow Crash", "author": "Neal Stephenson" }
 			],
 			"meetings": [
-				{
-					"date": "07/12/2026",
-					"time": "6:30 p.m.",
-					"place": "Braga Library"
-				},
-				{
-					"date": "07/26/2026",
-					"time": "6:30 p.m.",
-					"place": "Braga Library"
-				},
-				{
-					"date": "08/09/2026",
-					"time": "6:30 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "08/23/2026",
-					"time": "6:30 p.m.",
-					"place": "Braga Library"
-				},
-				{
-					"date": "09/06/2026",
-					"time": "6:30 p.m.",
-					"place": "Online"
-				}
+				{ "date": "07/12/2026", "time": "6:30 p.m.", "place": "Braga Library" },
+				{ "date": "07/26/2026", "time": "6:30 p.m.", "place": "Braga Library" },
+				{ "date": "08/09/2026", "time": "6:30 p.m.", "place": "Online" },
+				{ "date": "08/23/2026", "time": "6:30 p.m.", "place": "Braga Library" },
+				{ "date": "09/06/2026", "time": "6:30 p.m.", "place": "Online" }
 			]
 		},
 		{
 			"id": 5,
 			"name": "The Classics Club",
 			"description": "Revisiting the great novels that shaped modern literature — one masterpiece at a time.",
-			"currentBook": {
-				"title": "Anna Karenina",
-				"author": "Leo Tolstoy"
-			},
+			"currentBook": { "title": "Anna Karenina", "author": "Leo Tolstoy" },
 			"upcomingBooks": [
-				{
-					"title": "Middlemarch",
-					"author": "George Eliot"
-				},
-				{
-					"title": "Crime and Punishment",
-					"author": "Fyodor Dostoevsky"
-				},
-				{
-					"title": "War and Peace",
-					"author": "Leo Tolstoy"
-				}
+				{ "title": "Middlemarch", "author": "George Eliot" },
+				{ "title": "Crime and Punishment", "author": "Fyodor Dostoevsky" },
+				{ "title": "War and Peace", "author": "Leo Tolstoy" }
 			],
 			"pastBooks": [
-				{
-					"title": "Madame Bovary",
-					"author": "Gustave Flaubert"
-				},
-				{
-					"title": "Jane Eyre",
-					"author": "Charlotte Brontë"
-				},
-				{
-					"title": "The Brothers Karamazov",
-					"author": "Fyodor Dostoevsky"
-				},
-				{
-					"title": "Wuthering Heights",
-					"author": "Emily Brontë"
-				},
-				{
-					"title": "Great Expectations",
-					"author": "Charles Dickens"
-				},
-				{
-					"title": "Moby-Dick",
-					"author": "Herman Melville"
-				},
-				{
-					"title": "Pride and Prejudice",
-					"author": "Jane Austen"
-				}
+				{ "title": "Madame Bovary", "author": "Gustave Flaubert" },
+				{ "title": "Jane Eyre", "author": "Charlotte Brontë" },
+				{ "title": "The Brothers Karamazov", "author": "Fyodor Dostoevsky" },
+				{ "title": "Wuthering Heights", "author": "Emily Brontë" },
+				{ "title": "Great Expectations", "author": "Charles Dickens" },
+				{ "title": "Moby-Dick", "author": "Herman Melville" },
+				{ "title": "Pride and Prejudice", "author": "Jane Austen" }
 			],
 			"meetings": [
 				{
@@ -384,15 +165,9 @@
 			"id": 6,
 			"name": "Short & Sweet",
 			"description": "For busy readers — we focus on short stories, novellas, and essays that pack a punch.",
-			"currentBook": {
-				"title": "Exhalation",
-				"author": "Ted Chiang"
-			},
+			"currentBook": { "title": "Exhalation", "author": "Ted Chiang" },
 			"upcomingBooks": [
-				{
-					"title": "Men Without Women",
-					"author": "Haruki Murakami"
-				},
+				{ "title": "Men Without Women", "author": "Haruki Murakami" },
 				{
 					"title": "Her Body and Other Parties",
 					"author": "Carmen Maria Machado"
@@ -403,40 +178,15 @@
 				}
 			],
 			"pastBooks": [
-				{
-					"title": "Interpreter of Maladies",
-					"author": "Jhumpa Lahiri"
-				},
-				{
-					"title": "The Bloody Chamber",
-					"author": "Angela Carter"
-				},
-				{
-					"title": "Stories of Your Life and Others",
-					"author": "Ted Chiang"
-				}
+				{ "title": "Interpreter of Maladies", "author": "Jhumpa Lahiri" },
+				{ "title": "The Bloody Chamber", "author": "Angela Carter" },
+				{ "title": "Stories of Your Life and Others", "author": "Ted Chiang" }
 			],
 			"meetings": [
-				{
-					"date": "07/11/2026",
-					"time": "8 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "07/25/2026",
-					"time": "8 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "08/08/2026",
-					"time": "8 p.m.",
-					"place": "Online"
-				},
-				{
-					"date": "08/22/2026",
-					"time": "8 p.m.",
-					"place": "Online"
-				}
+				{ "date": "07/11/2026", "time": "8 p.m.", "place": "Online" },
+				{ "date": "07/25/2026", "time": "8 p.m.", "place": "Online" },
+				{ "date": "08/08/2026", "time": "8 p.m.", "place": "Online" },
+				{ "date": "08/22/2026", "time": "8 p.m.", "place": "Online" }
 			]
 		},
 		{
@@ -448,40 +198,22 @@
 				"author": "Kazuo Ishiguro"
 			},
 			"upcomingBooks": [
-				{
-					"title": "Stoner",
-					"author": "John Williams"
-				},
+				{ "title": "Stoner", "author": "John Williams" },
 				{
 					"title": "The Unlikely Pilgrimage of Harold Fry",
 					"author": "Rachel Joyce"
 				},
-				{
-					"title": "Olive Kitteridge",
-					"author": "Elizabeth Strout"
-				},
+				{ "title": "Olive Kitteridge", "author": "Elizabeth Strout" },
 				{
 					"title": "The Hundred-Year-Old Man Who Climbed Out of the Window and Disappeared",
 					"author": "Jonas Jonasson"
 				}
 			],
 			"pastBooks": [
-				{
-					"title": "A Gentleman in Moscow",
-					"author": "Amor Towles"
-				},
-				{
-					"title": "The Enchanted April",
-					"author": "Elizabeth von Arnim"
-				},
-				{
-					"title": "Major Pettigrew's Last Stand",
-					"author": "Helen Simonson"
-				},
-				{
-					"title": "The House in the Cerulean Sea",
-					"author": "TJ Klune"
-				},
+				{ "title": "A Gentleman in Moscow", "author": "Amor Towles" },
+				{ "title": "The Enchanted April", "author": "Elizabeth von Arnim" },
+				{ "title": "Major Pettigrew's Last Stand", "author": "Helen Simonson" },
+				{ "title": "The House in the Cerulean Sea", "author": "TJ Klune" },
 				{
 					"title": "Eleanor Oliphant Is Completely Fine",
 					"author": "Gail Honeyman"
@@ -509,69 +241,27 @@
 			"id": 8,
 			"name": "Plot Twist",
 			"description": "We live for the unexpected — thrillers, mysteries, and psychological fiction that keep us guessing until the last page.",
-			"currentBook": {
-				"title": "The Secret History",
-				"author": "Donna Tartt"
-			},
+			"currentBook": { "title": "The Secret History", "author": "Donna Tartt" },
 			"upcomingBooks": [
-				{
-					"title": "Gone Girl",
-					"author": "Gillian Flynn"
-				},
-				{
-					"title": "The Silent Patient",
-					"author": "Alex Michaelides"
-				},
-				{
-					"title": "Verity",
-					"author": "Colleen Hoover"
-				},
-				{
-					"title": "The Guest List",
-					"author": "Lucy Foley"
-				},
-				{
-					"title": "Then She Was Gone",
-					"author": "Lisa Jewell"
-				},
-				{
-					"title": "The Woman in the Window",
-					"author": "A. J. Finn"
-				}
+				{ "title": "Gone Girl", "author": "Gillian Flynn" },
+				{ "title": "The Silent Patient", "author": "Alex Michaelides" },
+				{ "title": "Verity", "author": "Colleen Hoover" },
+				{ "title": "The Guest List", "author": "Lucy Foley" },
+				{ "title": "Then She Was Gone", "author": "Lisa Jewell" },
+				{ "title": "The Woman in the Window", "author": "A. J. Finn" }
 			],
 			"pastBooks": [
-				{
-					"title": "Big Little Lies",
-					"author": "Liane Moriarty"
-				},
+				{ "title": "Big Little Lies", "author": "Liane Moriarty" },
 				{
 					"title": "The Girl with the Dragon Tattoo",
 					"author": "Stieg Larsson"
 				},
-				{
-					"title": "In the Woods",
-					"author": "Tana French"
-				},
-				{
-					"title": "Sharp Objects",
-					"author": "Gillian Flynn"
-				},
-				{
-					"title": "The Thursday Murder Club",
-					"author": "Richard Osman"
-				},
-				{
-					"title": "And Then There Were None",
-					"author": "Agatha Christie"
-				},
-				{
-					"title": "The Talented Mr. Ripley",
-					"author": "Patricia Highsmith"
-				},
-				{
-					"title": "Rebecca",
-					"author": "Daphne du Maurier"
-				}
+				{ "title": "In the Woods", "author": "Tana French" },
+				{ "title": "Sharp Objects", "author": "Gillian Flynn" },
+				{ "title": "The Thursday Murder Club", "author": "Richard Osman" },
+				{ "title": "And Then There Were None", "author": "Agatha Christie" },
+				{ "title": "The Talented Mr. Ripley", "author": "Patricia Highsmith" },
+				{ "title": "Rebecca", "author": "Daphne du Maurier" }
 			],
 			"meetings": [
 				{
@@ -584,11 +274,7 @@
 					"time": "7:30 p.m.",
 					"place": "Livraria Bertrand"
 				},
-				{
-					"date": "08/11/2026",
-					"time": "7:30 p.m.",
-					"place": "Online"
-				},
+				{ "date": "08/11/2026", "time": "7:30 p.m.", "place": "Online" },
 				{
 					"date": "08/25/2026",
 					"time": "7:30 p.m.",
@@ -605,40 +291,16 @@
 				"author": "José Saramago"
 			},
 			"upcomingBooks": [
-				{
-					"title": "O Deus das Pequenas Coisas",
-					"author": "Arundhati Roy"
-				},
-				{
-					"title": "Memorial do Convento",
-					"author": "José Saramago"
-				},
-				{
-					"title": "A Sombra do Vento",
-					"author": "Carlos Ruiz Zafón"
-				}
+				{ "title": "O Deus das Pequenas Coisas", "author": "Arundhati Roy" },
+				{ "title": "Memorial do Convento", "author": "José Saramago" },
+				{ "title": "A Sombra do Vento", "author": "Carlos Ruiz Zafón" }
 			],
 			"pastBooks": [
-				{
-					"title": "Os Maias",
-					"author": "Eça de Queirós"
-				},
-				{
-					"title": "Aparição",
-					"author": "Vergílio Ferreira"
-				},
-				{
-					"title": "A Sibila",
-					"author": "Agustina Bessa-Luís"
-				},
-				{
-					"title": "Levantado do Chão",
-					"author": "José Saramago"
-				},
-				{
-					"title": "O Ano da Morte de Ricardo Reis",
-					"author": "José Saramago"
-				}
+				{ "title": "Os Maias", "author": "Eça de Queirós" },
+				{ "title": "Aparição", "author": "Vergílio Ferreira" },
+				{ "title": "A Sibila", "author": "Agustina Bessa-Luís" },
+				{ "title": "Levantado do Chão", "author": "José Saramago" },
+				{ "title": "O Ano da Morte de Ricardo Reis", "author": "José Saramago" }
 			],
 			"meetings": [
 				{
@@ -651,11 +313,7 @@
 					"time": "6 p.m.",
 					"place": "Casa da Cultura, Braga"
 				},
-				{
-					"date": "08/13/2026",
-					"time": "6 p.m.",
-					"place": "Online"
-				}
+				{ "date": "08/13/2026", "time": "6 p.m.", "place": "Online" }
 			]
 		}
 	]
