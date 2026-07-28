@@ -18,3 +18,5 @@ jobs:
       # na pasta Frontend instalo as dependências e corro check 
       - run: cd Frontend && npm install && npm run check
       - run: cd api && npm install && npm run check
+
+      #testing synchronize
