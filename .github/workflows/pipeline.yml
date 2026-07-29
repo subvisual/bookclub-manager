@@ -1,6 +1,13 @@
 # ci:continuous integration 
 name: ci
-on: [pull_request]
+on:
+  # corre quando abro a pr, atualizo e volto a abrir
+  pull_request:
+    types: [opened, synchronize, reopened]
+    # sempre que é feito push para o main
+  push:
+    branches:
+      - main
 jobs:
   lint:
   # maquina virtual em que vai correr o job
@@ -8,6 +15,8 @@ jobs:
     steps:
       # descarrego o código na maquina virtual
       - uses: actions/checkout@v4
-      # na pasta Frontend instalos dependências e corro check 
+      # na pasta Frontend instalo as dependências e corro check 
       - run: cd Frontend && npm install && npm run check
       - run: cd api && npm install && npm run check
+
+      #testing synchronize
