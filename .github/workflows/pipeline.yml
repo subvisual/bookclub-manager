@@ -19,4 +19,9 @@ jobs:
       - run: cd Frontend && npm install && npm run check
       - run: cd api && npm install && npm run check
 
-      
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - run: cd Frontend && npm install && npm run test -- --run
+      - run: cd api && npm install && npm run test
