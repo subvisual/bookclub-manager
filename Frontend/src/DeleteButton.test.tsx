@@ -1,36 +1,33 @@
-import {render, screen, fireEvent} from "@testing-library/react"
-import {DeleteButton} from "./DeleteButton";
-import {expect, vi} from "vitest";
+import { fireEvent, render, screen } from "@testing-library/react";
+import { expect, vi } from "vitest";
+import { DeleteButton } from "./DeleteButton";
 
+it("Calls deleteClub with the correct id", () => {
+	// Arrange
 
-it("Calls deleteClub with the correct id", () =>{
+	//Crio o mock
+	// O vitest, através do vi.fn(), cria a function mock
+	const deleteClubMock = vi.fn();
 
-// Arrange
+	//Renderiza o button mas usa a função mock em vez da deleteClub, pois apagaria de facto o club
+	render(
+		<DeleteButton
+			id={1}
+			// Passo o mock como prop
+			deleteClub={deleteClubMock}
+		/>,
+	);
 
-//Crio o mock
-// O vitest, através do vi.fn(), cria a function mock
-const deleteClubMock = vi.fn();
+	//Act
 
-//Renderiza o button mas usa a função mock em vez da deleteClub, pois apagaria de facto o club
-render (
-    <DeleteButton
-    id={1}
-    // Passo o mock como prop
-    deleteClub={deleteClubMock}
-    />
-)
+	//Simula o evento - click do util
+	fireEvent.click(
+		// Localiza o button pelo role e pelo nome que o utilizador vê
+		screen.getByRole("button", { name: "DELETE CLUB" }),
+	);
 
-//Act
+	//Assert
 
-//Simula o evento - click do util
-fireEvent.click(
-// Localiza o button pelo role e pelo nome que o utilizador vê
-screen.getByRole("button", {name: "DELETE CLUB"})
-);
-
-
-//Assert
-
-//Verifica se o mock foi chamado com o id
-expect(deleteClubMock).toHaveBeenCalledWith(1)
+	//Verifica se o mock foi chamado com o id
+	expect(deleteClubMock).toHaveBeenCalledWith(1);
 });
