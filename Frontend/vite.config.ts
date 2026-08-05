@@ -4,11 +4,11 @@ import { defineConfig } from "vitest/config";
 // https://vite.dev/config/
 export default defineConfig({
 	plugins: [react()],
-	
+
 	test: {
-	// para usar o browser falso
-	environment: "jsdom",
-	//
-	globals:true,
-	}
+		// para usar o browser falso
+		environment: "jsdom",
+		//
+		globals: true,
+	},
 });
