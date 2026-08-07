@@ -12,6 +12,9 @@ router.get("/", (req, res) => {
 
 router.post("/", (req, res) => {
 	const newBookClub = req.body;
+	//Para adicionar id ao new club
+	const maxId = Math.max(...clubs.clubs.map((club) => club.id), 0);
+	newBookClub.id= maxId + 1;
 	//Adiciono ao array
 	clubs.clubs.push(newBookClub);
 	// Guarda em json

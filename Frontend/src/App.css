@@ -4,6 +4,23 @@
 	padding: 0 0;
 	display: flex;
 	align-items: center;
+
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 2000;
+	background-color: #fefcf7;
+	justify-content: space-between;
+}
+
+.header-left {
+	display: flex;
+}
+
+.header-button {
+	margin-right: 40px;
+	margin-top: 30px;
 }
 
 .header img {
@@ -75,6 +92,11 @@ hr {
 .title-divider {
 	border: none;
 	border-top: 1px solid #b47a65;
+	position: fixed;
+	width: 100%;
+	top: 93px;
+	z-index: 3000;
+	left: 0;
 }
 
 .club-card {
@@ -317,4 +339,31 @@ hr {
 .forms input {
 	display: block;
 	margin-bottom: 10px;
+}
+
+.drawer {
+	position: fixed;
+	right: 0;
+
+	width: 400px;
+
+	padding: 20px;
+	z-index: 1000;
+	background-color: #fefcf7;
+	border-left: 1px solid #b47a65;
+	border-top: 1px solid #b47a65;
+
+	top: 99px;
+	height: 100%;
+}
+
+.new-club-form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 5px;
+}
+
+.page-content {
+	margin-top: 115px;
 }

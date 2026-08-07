@@ -21,7 +21,9 @@ export interface Meeting {
 	place: string;
 }
 
-export const url = "http://localhost:3000/clubs";
+export const url = `${import.meta.env.VITE_API_URL}/clubs`;
+
+type NewBookClub = Omit<BookClub, "id">;
 
 // : Tipar a função. Esta devolve uma promise que por sua vez devolve o [] de clubs.
 // É chamada no react
@@ -62,7 +64,7 @@ export function updateBookClub(
 	});
 }
 
-export function createBookClub(newClub: BookClub): Promise<BookClub> {
+export function createBookClub(newClub: NewBookClub): Promise<BookClub> {
 	return fetch(url, {
 		method: "POST",
 		body: JSON.stringify(newClub),

@@ -1,6 +1,9 @@
+import { AddClubButton } from "./AddClubButton";
 import "./App.css";
+import { useState } from "react";
 import logo from "./assets/owl-logo.png";
 import { ClubDetails } from "./ClubDetails";
+import { ClubDrawer } from "./ClubDrawer";
 import { ClubList } from "./ClubList";
 import { useClubs } from "./useClubs";
 
@@ -16,7 +19,20 @@ function App() {
 		backToList,
 		loading,
 		error,
+		createClub,
 	} = useClubs();
+
+	// Controla o estado do Drawer, no qual vão ser inseridos os dados do novo Club
+	const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+	function openAddClubDrawer() {
+		setIsDrawerOpen(true);
+	}
+
+	function closeAddClubDrawer() {
+		setIsDrawerOpen(false);
+	}
+
 	// Localizo o club por id, que é igual ao do selectedCLub
 	const club = clubs.find((club) => club.id === selectedClub);
 	// Se o selectedClub for igual a null ou se o club não existir(o id n existe na lista), mostra CLubList, se não ClubDetails
@@ -31,20 +47,33 @@ function App() {
 	return (
 		<>
 			<div className="header">
-				<img src={logo} alt="owl logo" />
-				<h1>The Club Room</h1>
+				<div className="header-left">
+					<img src={logo} alt="owl logo" />
+					<h1>The Club Room</h1>
+				</div>
+				<div className="header-button">
+					<AddClubButton openAddClubDrawer={openAddClubDrawer} />
+				</div>
 			</div>
-			<hr className="title-divider" />
-			{selectedClub == null || !club ? (
-				// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
-				<ClubList showClub={showClub} deleteClub={deleteClub} clubs={clubs} />
-			) : (
-				<ClubDetails
-					{...club}
-					updateClub={updateClub}
-					backToList={backToList}
+
+			<div className="page-content">
+				<hr className="title-divider" />
+				<ClubDrawer
+					isOpen={isDrawerOpen}
+					saveClub={createClub}
+					closeDrawer={closeAddClubDrawer}
 				/>
-			)}
+				{selectedClub == null || !club ? (
+					// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
+					<ClubList showClub={showClub} deleteClub={deleteClub} clubs={clubs} />
+				) : (
+					<ClubDetails
+						{...club}
+						updateClub={updateClub}
+						backToList={backToList}
+					/>
+				)}
+			</div>
 		</>
 	);
 }
