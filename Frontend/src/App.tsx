@@ -5,7 +5,10 @@ import logo from "./assets/owl-logo.png";
 import { ClubDetails } from "./ClubDetails";
 import { ClubDrawer } from "./ClubDrawer";
 import { ClubList } from "./ClubList";
+import type { BookClub } from "./callApi";
 import { useClubs } from "./useClubs";
+
+type NewBookClub = Omit<BookClub, "id">;
 
 function App() {
 	// Uso o hook criado em useClubs para ir buscar a lista de clubs e selectedClub
@@ -30,6 +33,22 @@ function App() {
 	}
 
 	function closeAddClubDrawer() {
+		setIsDrawerOpen(false);
+	}
+
+	const [clubToEdit, setClubToEdit] = useState<BookClub | null>(null);
+	function openEditDrawer(club: BookClub) {
+		setClubToEdit(club);
+		setIsDrawerOpen(true);
+	}
+
+	function handleSaveClub(clubForm: NewBookClub) {
+		if (clubToEdit) {
+			updateClub(clubToEdit.id, clubForm);
+		} else {
+			createClub(clubForm);
+		}
+		setClubToEdit(null);
 		setIsDrawerOpen(false);
 	}
 
@@ -60,8 +79,9 @@ function App() {
 				<hr className="title-divider" />
 				<ClubDrawer
 					isOpen={isDrawerOpen}
-					saveClub={createClub}
+					saveClub={handleSaveClub}
 					closeDrawer={closeAddClubDrawer}
+					clubToEdit={clubToEdit}
 				/>
 				{selectedClub == null || !club ? (
 					// Preciso passar showClub para ClubList para o fluxo App -> ClubList -> ClubCard -> DetailsButton
@@ -71,6 +91,7 @@ function App() {
 						{...club}
 						updateClub={updateClub}
 						backToList={backToList}
+						openEditDrawer={openEditDrawer}
 					/>
 				)}
 			</div>

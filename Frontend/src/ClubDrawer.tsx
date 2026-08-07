@@ -7,16 +7,26 @@ type ClubDrawerProps = {
 	isOpen: boolean;
 	saveClub: (clubForm: NewBookClub) => void;
 	closeDrawer: () => void;
+	clubToEdit: BookClub | null;
 };
 
-export function ClubDrawer({ isOpen, saveClub, closeDrawer }: ClubDrawerProps) {
+export function ClubDrawer({
+	isOpen,
+	saveClub,
+	closeDrawer,
+	clubToEdit,
+}: ClubDrawerProps) {
 	if (!isOpen) {
 		return null;
 	}
 
 	return (
 		<div className="drawer">
-			<NewClubForm saveClub={saveClub} closeDrawer={closeDrawer} />
+			<NewClubForm
+				saveClub={saveClub}
+				closeDrawer={closeDrawer}
+				clubToEdit={clubToEdit}
+			/>
 		</div>
 	);
 }
