@@ -63,8 +63,6 @@ const mockClubs = [
 	},
 ];
 
-it("Renders book clubs in the App", () => {
-	// O vitest substitui o módulo "./useClubs" por outro falso
 	vi.mock("./useClubs", () => ({
 		useClubs: () => {
 			return {
@@ -80,6 +78,10 @@ it("Renders book clubs in the App", () => {
 			};
 		},
 	}));
+
+it("Renders book clubs in the App", () => {
+	// O vitest substitui o módulo "./useClubs" por outro falso
+
 
 	render(<App />);
 
