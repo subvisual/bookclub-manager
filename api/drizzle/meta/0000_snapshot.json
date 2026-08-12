@@ -186,7 +186,17 @@
       "isRLSEnabled": false
     }
   },
-  "enums": {},
+  "enums": {
+    "public.status": {
+      "name": "status",
+      "schema": "public",
+      "values": [
+        "current",
+        "upcoming",
+        "past"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "roles": {},

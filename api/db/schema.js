@@ -30,4 +30,4 @@ const clubBooks = pgTable('club_books', {
 }
 );
 
-module.exports = { clubs, books, clubBooks};
+module.exports = { clubs, books, clubBooks, statusEnum };
