@@ -5,6 +5,7 @@ import type { Book, BookClub, Meeting } from "./callApi";
 type ClubDetailsProps = BookClub & {
 	backToList: () => void;
 	updateClub: (id: number, updateClub: Partial<BookClub>) => void;
+	openEditDrawer: (club: BookClub) => void;
 };
 
 export function ClubDetails({
@@ -17,6 +18,7 @@ export function ClubDetails({
 	meetings,
 	updateClub,
 	backToList,
+	openEditDrawer,
 }: ClubDetailsProps) {
 	//Estado para controlar os forms, verifica se é book, meeting ou null
 	const [showForm, setShowForm] = useState<"book" | "meeting" | null>(null);
@@ -30,8 +32,29 @@ export function ClubDetails({
 	});
 	return (
 		<div>
+			<div className="edit-button">
 			<h2 className="club-title">{name}</h2>
-			<div className="club-header">
+		
+				<button
+				className="buttonDark"
+					type="button"
+					onClick={() =>
+						openEditDrawer({
+							id,
+							name,
+							description,
+							currentBook,
+							upcomingBooks,
+							pastBooks,
+							meetings,
+						})
+					}
+				>
+					EDIT CLUB
+				</button>
+				
+				</div>
+				<div className="club-header">
 				<p>{description}</p>
 
 				<button

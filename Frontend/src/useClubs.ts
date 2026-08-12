@@ -7,6 +7,8 @@ import {
 	updateBookClub,
 } from "./callApi";
 
+type NewBookClub = Omit<BookClub, "id">;
+
 export function useClubs() {
 	// Usestate devolve variável clubs com o estado atual e setClubs é função do React que atualiza o estado.
 	const [clubs, setClubs] = useState<BookClub[]>([]);
@@ -54,7 +56,7 @@ export function useClubs() {
 		});
 	}
 
-	function createClub(newClub: BookClub) {
+	function createClub(newClub: NewBookClub) {
 		// O then recebe a promise --- BookClub -- em createdClub
 		createBookClub(newClub).then((createdClub) => {
 			//Atualizo clubs, cria novo array com clubs + novo club

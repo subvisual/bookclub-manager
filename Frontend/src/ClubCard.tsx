@@ -47,7 +47,10 @@ export function ClubCard({
 				</div>
 				<hr />
 				<h3>
-					Next meeting • <span>{meetings[0].date}</span>
+					Next meeting •{" "}
+					<span>
+						{meetings.length > 0 ? meetings[0].date : "No meetings scheduled"}
+					</span>
 				</h3>
 				{/* Passa as props para o DeleteButton, as props que são definidas no ButtonProps*/}
 			</div>
