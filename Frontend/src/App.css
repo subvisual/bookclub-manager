@@ -367,3 +367,9 @@ hr {
 .page-content {
 	margin-top: 115px;
 }
+
+.edit-button {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}

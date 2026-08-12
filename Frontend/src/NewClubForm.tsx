@@ -6,20 +6,36 @@ type NewBookClub = Omit<BookClub, "id">;
 type NewClubFormProps = {
 	saveClub: (clubForm: NewBookClub) => void;
 	closeDrawer: () => void;
+	clubToEdit: BookClub | null;
 };
 
-export function NewClubForm({ saveClub, closeDrawer }: NewClubFormProps) {
-	const [clubForm, setClubForm] = useState<NewBookClub>({
-		name: "",
-		description: "",
-		currentBook: {
-			title: "",
-			author: "",
-		},
-		upcomingBooks: [],
-		pastBooks: [],
-		meetings: [],
-	});
+export function NewClubForm({
+	saveClub,
+	closeDrawer,
+	clubToEdit,
+}: NewClubFormProps) {
+	const [clubForm, setClubForm] = useState<NewBookClub>(
+		clubToEdit
+			? {
+					name: clubToEdit.name,
+					description: clubToEdit.description,
+					currentBook: clubToEdit.currentBook,
+					upcomingBooks: clubToEdit.upcomingBooks,
+					pastBooks: clubToEdit.pastBooks,
+					meetings: clubToEdit.meetings,
+				}
+			: {
+					name: "",
+					description: "",
+					currentBook: {
+						title: "",
+						author: "",
+					},
+					upcomingBooks: [],
+					pastBooks: [],
+					meetings: [],
+				},
+	);
 	return (
 		<div className="new-club-form">
 			<h3>NEW CLUB</h3>
